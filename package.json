@@ -1,0 +1,24 @@
+{
+  "name": "savingsdetective",
+  "version": "1.0.0",
+  "description": "A personal agent that finds money merchants owe you and claims it, with proof.",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=26" },
+  "scripts": {
+    "demo": "node --env-file-if-exists=.env.local src/demo.ts",
+    "watch": "node --env-file-if-exists=.env.local src/watch.ts",
+    "web": "node --env-file-if-exists=.env.local src/web/server.ts",
+    "reset": "node src/reset.ts",
+    "data": "node scripts/build-orders.ts data/raw/open-ecommerce",
+    "senso:load": "node --env-file-if-exists=.env.local scripts/senso-load.ts",
+    "screenshots": "node --env-file-if-exists=.env.local scripts/screenshots.ts",
+    "test:drill": "node --env-file-if-exists=.env.local scripts/local-drill.ts"
+  },
+  "dependencies": {
+    "@amplitude/analytics-node": "^1.5.85"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^24.0.0"
+  }
+}

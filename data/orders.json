@@ -1,0 +1,180 @@
+{
+  "household": {
+    "responseId": "R_3HigTq4itishziE",
+    "income": "Less than $25,000",
+    "size": 3,
+    "state": "California",
+    "source": "Open E-commerce 1.0 survey.csv (Berke et al., Harvard Dataverse, doi:10.7910/DVN/YGLYDY)"
+  },
+  "generatedAt": "2026-11-20T21:48:09.124Z",
+  "orders": [
+    {
+      "id": "ord_01",
+      "merchant": "amazon",
+      "title": "Baby Wipes, Pampers Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, 8 Pop-Top Packs with 4 Refill Packs for Dispenser Tub, 864 Total Wipes (Packaging May Vary)",
+      "asin": "B07JRBSPZ3",
+      "category": "SKIN_CLEANING_WIPE",
+      "price": 24.99,
+      "qty": 1,
+      "orderedAt": "2026-11-18T18:00:00.000Z",
+      "delivery": {
+        "type": "Guaranteed One-Day Delivery",
+        "fee": 9.95,
+        "promisedBy": "2026-11-20T06:00:00.000Z",
+        "deliveredAt": "2026-11-20T08:14:00.000Z"
+      },
+      "priceCheck": null,
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-02-22 on Amazon",
+        "merchant": "Real merchant",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_02",
+      "merchant": "target",
+      "title": "Wchiuoe Heated Blanket, 62\"x84\" 10 Heating Levels & 2-10H Auto Off Electric Blanket, Machine Washable Soft Flannel Fast Heating Throw Blanket for Bedroom Office Couch…",
+      "asin": "B09ZPFGLYH",
+      "category": "BLANKET",
+      "price": 46.99,
+      "qty": 1,
+      "orderedAt": "2026-11-14T18:00:00.000Z",
+      "delivery": null,
+      "priceCheck": {
+        "priceNow": 39.99,
+        "seenAt": "2026-11-20T17:00:00.000Z"
+      },
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-11-08 on Amazon",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_03",
+      "merchant": "costco",
+      "title": "cuisinel Cast Iron Skillet + Lid - 2-In-1 Multi Cooker - Deep Pot + Frying Pan - 3-Qt Dutch Oven - Pre-Seasoned Oven Safe Cookware - Indoor/Outdoor - Grill, Stovetop, Induction Safe - Great for Bread",
+      "asin": "B076PR8LT5",
+      "category": "SAUTE_FRY_PAN",
+      "price": 42.99,
+      "qty": 1,
+      "orderedAt": "2026-11-08T18:00:00.000Z",
+      "delivery": null,
+      "priceCheck": {
+        "priceNow": 34.99,
+        "seenAt": "2026-11-20T17:00:00.000Z"
+      },
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-11-23 on Amazon",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_04",
+      "merchant": "bestbuy",
+      "title": "beyond by BLACK+DECKER dustbuster® - Handheld Vacuum Cleaner - Cordless, Icy Blue - Mini Vacuum Cleaner (Model Number: HNVC215B12AEV)",
+      "asin": "B08B6CJ9RT",
+      "category": "VACUUM_CLEANER",
+      "price": 32.94,
+      "qty": 1,
+      "orderedAt": "2026-11-16T18:00:00.000Z",
+      "delivery": null,
+      "priceCheck": {
+        "priceNow": 27.99,
+        "seenAt": "2026-11-20T17:00:00.000Z"
+      },
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-10-08 on Amazon",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_05",
+      "merchant": "target",
+      "title": "HealSmart 20 Inch 3-Speed High Velocity Heavy Duty Metal Industrial Floor Fans Quiet for Home, Commercial, Residential, and Greenhouse Use, Outdoor/Indoor, Black, 20\"",
+      "asin": "B08M9BYMY8",
+      "category": "ELECTRIC_FAN",
+      "price": 54.99,
+      "qty": 1,
+      "orderedAt": "2026-11-01T18:00:00.000Z",
+      "delivery": null,
+      "priceCheck": {
+        "priceNow": 44.99,
+        "seenAt": "2026-11-20T17:00:00.000Z"
+      },
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-08-11 on Amazon",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_06",
+      "merchant": "cornercart",
+      "title": "Community Coffee Café Special Half-Caff Ground Coffee, Medium Dark Roast, 32 Ounce Bag (Pack of 2)",
+      "asin": "B018LJZHVS",
+      "category": "COFFEE",
+      "price": 25.96,
+      "qty": 1,
+      "orderedAt": "2026-11-19T18:00:00.000Z",
+      "delivery": {
+        "type": "2-hour grocery window",
+        "fee": 0,
+        "promisedBy": "2026-11-20T02:00:00.000Z",
+        "deliveredAt": "2026-11-20T03:55:00.000Z"
+      },
+      "priceCheck": null,
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-06-16 on Amazon",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_07",
+      "merchant": "amazon",
+      "title": "Energizer AAA Batteries, Triple A Long-Lasting Alkaline Power Batteries, 32 Count (Pack of 1)",
+      "asin": "B09RTVN5GN",
+      "category": "BATTERY",
+      "price": 21.3,
+      "qty": 1,
+      "orderedAt": "2026-11-11T18:00:00.000Z",
+      "delivery": {
+        "type": "Standard",
+        "fee": 0,
+        "promisedBy": "2026-11-15T06:00:00.000Z",
+        "deliveredAt": "2026-11-13T23:00:00.000Z"
+      },
+      "priceCheck": null,
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-12-02 on Amazon",
+        "merchant": "Real merchant",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_08",
+      "merchant": "amazon",
+      "title": "Hook On Chair, VEEYOO Clip On High Chair Folding Fast Table Chair with Storage Bag, Portable Baby Feeding Seat Attach to Table for Home and Travel",
+      "asin": "B08QRGPSVP",
+      "category": "BABY_SEAT",
+      "price": 46.99,
+      "qty": 1,
+      "orderedAt": "2026-11-05T18:00:00.000Z",
+      "delivery": {
+        "type": "Standard",
+        "fee": 0,
+        "promisedBy": "2026-11-10T06:00:00.000Z",
+        "deliveredAt": "2026-11-09T21:00:00.000Z"
+      },
+      "priceCheck": null,
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-04 on Amazon",
+        "merchant": "Real merchant",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    }
+  ]
+}

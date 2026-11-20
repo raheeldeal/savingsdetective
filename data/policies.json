@@ -1,0 +1,72 @@
+{
+  "note": "Local rule book. Loaded into Senso by `npm run senso:load` when SENSO_API_KEY is set. Clauses marked verified were read on the source page on 2026-11-20. Unverified clauses are paraphrased and say so in the audit page.",
+  "policies": [
+    {
+      "id": "amazon-guaranteed-delivery",
+      "merchant": "amazon",
+      "merchantName": "Amazon",
+      "kind": "late_delivery",
+      "title": "Guaranteed Delivery",
+      "clause": "If an order with a guaranteed delivery date arrives after the guaranteed date, Amazon refunds the shipping fees paid for the guaranteed option.",
+      "refund": "shipping_fee",
+      "windowDays": 30,
+      "sourceUrl": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GXWHTQWK9E6MWGCH",
+      "verified": false,
+      "verifiedNote": "Paraphrased. Amazon's help page returned HTTP 503 during the build; check the source."
+    },
+    {
+      "id": "bestbuy-price-match",
+      "merchant": "bestbuy",
+      "merchantName": "Best Buy",
+      "kind": "price_drop",
+      "title": "Price Match Guarantee",
+      "clause": "If Best Buy lowers its own price on an item during the return and exchange period, Best Buy will match that lower price and refund the difference.",
+      "refund": "price_difference",
+      "windowDays": 15,
+      "sourceUrl": "https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c?id=pcmcat290300050002",
+      "verified": false,
+      "verifiedNote": "Paraphrased. The Best Buy help URL we tried returned HTTP 404; check the source."
+    },
+    {
+      "id": "costco-price-adjustment",
+      "merchant": "costco",
+      "merchantName": "Costco",
+      "kind": "price_drop",
+      "title": "Price Match: Costco.com Orders",
+      "clause": "Purchases that reduce in price within 30 days of the date of purchase are eligible for a price match.",
+      "refund": "price_difference",
+      "windowDays": 30,
+      "sourceUrl": "https://customerservice.costco.com/app/answers/answer_view/a_id/628",
+      "verified": true,
+      "verifiedNote": "Verbatim from Costco customer service document CU1491."
+    },
+    {
+      "id": "target-price-match",
+      "merchant": "target",
+      "merchantName": "Target",
+      "kind": "price_drop",
+      "title": "Price Match Guarantee",
+      "clause": "Price matches may be requested at time of purchase or within 14 days after purchase.",
+      "refund": "price_difference",
+      "windowDays": 14,
+      "sourceUrl": "https://www.target.com/help/article/000062256",
+      "verified": true,
+      "verifiedNote": "Verbatim from Target's price match policy. Target also runs a holiday window (Nov 1 to Dec 24, 2026) that this demo does not apply."
+    },
+    {
+      "id": "cornercart-late-credit",
+      "merchant": "cornercart",
+      "merchantName": "Corner Cart Grocery",
+      "kind": "late_delivery",
+      "title": "On-Time Window Promise",
+      "clause": "If your groceries arrive more than 30 minutes after the end of your delivery window, we credit $3.00 to your account.",
+      "refund": "fixed",
+      "fixedAmount": 3.0,
+      "graceMinutes": 30,
+      "windowDays": 7,
+      "sourceUrl": "https://example.com/cornercart/promise",
+      "verified": true,
+      "verifiedNote": "Fictional merchant created for this demo."
+    }
+  ]
+}
