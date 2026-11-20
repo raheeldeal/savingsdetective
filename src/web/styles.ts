@@ -68,7 +68,7 @@ dt{color:var(--ink-3)} dd{text-align:right;font-variant-numeric:tabular-nums} dl
 .tl li::before{content:"";position:absolute;left:-6px;top:15px;width:11px;height:11px;border-radius:50%;background:var(--surface);border:2px solid var(--ink-3)}
 .tl li.user::before{border-color:var(--blue)} .tl li.merchant::before{border-color:var(--sim)} .tl li.done::before{background:var(--accent);border-color:var(--accent)}
 .tl .when{font-size:12px;color:var(--ink-3);font-variant-numeric:tabular-nums} .tl .what{font-weight:600;font-size:14px} .tl .det{font-size:13px;color:var(--ink-2);word-break:break-word}
-.prov{padding:4px 16px 12px} .prov p{margin:10px 0 0;font-size:14px;display:flex;gap:10px} .prov p .chip{flex:none}
+.prov{padding:4px 16px 12px} .prov p{margin:10px 0 0;font-size:14px;display:flex;gap:10px;align-items:flex-start} .prov p .chip{flex:none}
 .foot{margin-top:40px;font-size:13px;color:var(--ink-3);text-align:center}
 .foot a{color:var(--ink-2)}
 code{font:12px/1.4 ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface-2);padding:2px 6px;border-radius:6px}

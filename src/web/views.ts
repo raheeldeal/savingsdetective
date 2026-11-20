@@ -91,7 +91,7 @@ export function phonePage() {
   const s = load();
   const msgs = s.outbox.slice(-6).map((m) => `<div class="pb">${linkify(m.text)}</div>`).join("");
   return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>iMessage recreation</title><style>
-body{margin:0;background:#e8e6df;font:-apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}
+body{margin:0;background:transparent;font:16px/1.3 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}
 .phone{width:390px;height:780px;background:#fff;border-radius:54px;border:12px solid #111;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative}
 .bar{padding:46px 16px 10px;text-align:center;border-bottom:1px solid #e5e5ea;background:#f7f7f7}
 .av{width:44px;height:44px;border-radius:50%;background:#0f7b4f;color:#fff;margin:0 auto 4px;display:grid;place-items:center;font-weight:700;font-size:20px}
