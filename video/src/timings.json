@@ -1,57 +1,57 @@
 {
   "fps": 30,
-  "total": 2310,
+  "total": 4612,
   "hasPhoneClip": false,
   "segments": {
     "title": {
       "from": 0,
-      "frames": 120,
-      "audio": ""
+      "frames": 214,
+      "audio": "voice-title.wav"
     },
     "problem": {
-      "from": 120,
-      "frames": 180,
-      "audio": ""
+      "from": 214,
+      "frames": 360,
+      "audio": "voice-problem.wav"
     },
     "data": {
-      "from": 300,
-      "frames": 210,
-      "audio": ""
+      "from": 574,
+      "frames": 423,
+      "audio": "voice-data.wav"
     },
     "thread": {
-      "from": 510,
-      "frames": 480,
-      "audio": ""
+      "from": 997,
+      "frames": 720,
+      "audio": "voice-thread.wav"
     },
     "audit": {
-      "from": 990,
-      "frames": 390,
-      "audio": ""
+      "from": 1717,
+      "frames": 1005,
+      "audio": "voice-audit.wav"
     },
     "index": {
-      "from": 1380,
-      "frames": 150,
-      "audio": ""
+      "from": 2722,
+      "frames": 360,
+      "audio": "voice-index.wav"
     },
     "arch": {
-      "from": 1530,
-      "frames": 270,
-      "audio": ""
+      "from": 3082,
+      "frames": 540,
+      "audio": "voice-arch.wav"
     },
     "sponsors": {
-      "from": 1800,
-      "frames": 180,
-      "audio": ""
+      "from": 3622,
+      "frames": 420,
+      "audio": "voice-sponsors.wav"
     },
     "honest": {
-      "from": 1980,
-      "frames": 120,
-      "audio": ""
+      "from": 4042,
+      "frames": 240,
+      "audio": "voice-honest.wav"
     },
     "close": {
-      "from": 2100,
-      "frames": 210,
-      "audio": ""
+      "from": 4282,
+      "frames": 330,
+      "audio": "voice-close.wav"
     }
   }
 }

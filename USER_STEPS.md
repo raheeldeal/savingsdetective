@@ -28,9 +28,9 @@ The repo is already public at https://github.com/raheeldeal/savingsdetective. If
 2. Open **QuickTime Player > File > New Movie Recording**. Click the small arrow next to the red record button and choose your iPhone as the **Camera** and **Microphone**.
 3. Click record. On the Mac, run `npm run demo -- --fresh`. Wait for the "Found" text on the phone, tap the link, tap **Approve and file**, wait for "Amazon approved $9.95." Stop recording (about 30 seconds).
 4. Save as `phone.mov`, then convert it: `ffmpeg -i ~/Desktop/phone.mov -vf scale=-2:1080 -an /Users/raheelahmed/personal-agents-hackathon/video/public/phone.mp4`
-5. Open `video/src/timings.json` and change `"hasPhoneClip": false` to `"hasPhoneClip": true`. Save.
-6. Re-render: `cd video && npm install && npm run render`. The phone scene now plays your real clip instead of the recreation. Output: `video/out/savingsdetective.mp4`.
-7. Optional voiceover: `npm run voice` (macOS `say`, Samantha) rewrites `timings.json` into a longer 2.5 minute voiced cut; then `npm run render` again.
+5. Rebuild: `cd video && npm install && npm run voice && npm run render`. `npm run voice` regenerates the macOS `say` voiceover and notices `public/phone.mp4`, so the phone scene plays your real clip instead of the recreation. Output: `video/out/savingsdetective.mp4` (about 2.5 minutes).
+6. Better voice, no signup: **System Settings > Accessibility > Spoken Content > System Voice > Manage Voices**, download an "Enhanced" or "Premium" English voice (for example Ava (Premium)), then run `SAY_VOICE="Ava (Premium)" npm run voice && npm run render`.
+7. To re-capture the real audit-page footage: from the repo root, with `npm run web` running, run `npm run demo -- --fresh --exit`, then `node scripts/capture-footage.ts /tmp/f.mp4 && ffmpeg -y -i /tmp/f.mp4 -c:v libx264 -pix_fmt yuv420p -r 30 video/public/audit.mp4`.
 
 ## 3. Senso rule book (10 minutes)
 

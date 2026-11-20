@@ -51,7 +51,7 @@ const Problem = () => (
     <Rise><Eyebrow>The problem</Eyebrow></Rise>
     <Rise delay={10}><div style={{ fontSize: 92, fontWeight: 700, letterSpacing: "-0.035em", lineHeight: 1.08, marginTop: 24, maxWidth: 1500 }}>
       Refunds are promised. Almost nobody claims them.</div></Rise>
-    <Rise delay={50}><div style={{ fontSize: 46, color: C.ink2, marginTop: 36, maxWidth: 1400, lineHeight: 1.3 }}>
+    <Rise delay={150}><div style={{ fontSize: 46, color: C.ink2, marginTop: 36, maxWidth: 1400, lineHeight: 1.3 }}>
       The households that lose the most have the <span style={{ color: C.accent, fontWeight: 650 }}>least time to chase fees</span>.</div></Rise>
   </AbsoluteFill>
 );
@@ -87,14 +87,14 @@ const Data = () => (
 );
 
 const MSGS = [
-  { at: 20, text: "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: savingsdetective.local/c/clm_56456548", me: false },
-  { at: 250, text: "Filed. Proof: savingsdetective.local/c/clm_56456548", me: false },
-  { at: 360, text: "Amazon approved $9.95.", me: false },
-  { at: 440, text: "What I've saved you: $17.90 recovered so far. $15.00 is waiting on your OK.", me: false },
+  { at: 140, text: "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: savingsdetective.local/c/clm_56456548", me: false },
+  { at: 380, text: "Filed. Proof: savingsdetective.local/c/clm_56456548", me: false },
+  { at: 520, text: "Amazon approved $9.95.", me: false },
+  { at: 610, text: "What I've saved you: $17.90 recovered so far. $15.00 is waiting on your OK.", me: false },
 ];
 const Thread = () => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig();
-  const tap = interpolate(f, [170, 185, 200], [0, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const tap = interpolate(f, [320, 335, 350], [0, 1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ flexDirection: "row", alignItems: "center", padding: "0 160px", gap: 120 }}>
       <div style={{ flex: 1 }}>
@@ -102,7 +102,7 @@ const Thread = () => {
         <Rise delay={10}><div style={{ fontSize: 80, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.08, marginTop: 20 }}>It texts you first.</div></Rise>
         <Rise delay={22}><div style={{ fontSize: 36, color: C.ink2, marginTop: 28, lineHeight: 1.4 }}>No app. A background agent sends an iMessage from your Mac when it finds money, then waits for one tap.</div></Rise>
         <div style={{ marginTop: 40, display: "flex", flexDirection: "column", gap: 14, fontSize: 30 }}>
-          {[["Found", 20], ["You approve", 185], ["Filed", 250], ["Paid", 360]].map(([t, at]) => (
+          {[["Found", 140], ["You approve", 335], ["Filed", 380], ["Paid", 520]].map(([t, at]) => (
             <div key={t as string} style={{ opacity: f > (at as number) ? 1 : 0.25, display: "flex", alignItems: "center", gap: 14, fontWeight: 600 }}>
               <span style={{ width: 14, height: 14, borderRadius: 7, background: f > (at as number) ? C.accent : C.line }} />{t}</div>))}
         </div>
@@ -130,21 +130,21 @@ const Thread = () => {
 };
 
 const Audit = () => {
-  const f = useCurrentFrame(); const dur = timings.segments.audit.frames;
-  const y = interpolate(f, [50, dur - 30], [0, -4229], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
-  const notes: [number, string][] = [[0, "The amount and why"], [50, "The exact clause, with its source"], [105, "The evidence"], [145, "The merchant conversation"], [265, "Every step, timestamped"]];
-  const current = [...notes].reverse().find(([at]) => f >= at)![1];
+  const f = useCurrentFrame();
+  const notes: [number, string][] = [[0, "The amount and why"], [75, "The exact clause, with its source"], [210, "The evidence"], [370, "One tap to approve"], [420, "Filed, then recovered"], [580, "The merchant conversation"], [740, "Every step, timestamped"]];
+  const current = [...notes].reverse().find(([at]) => f >= at)!;
+  const k = interpolate(f - current[0], [0, 10], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
     <AbsoluteFill style={{ flexDirection: "row", alignItems: "center", padding: "0 160px", gap: 120 }}>
-      <Label>Real screenshots</Label>
+      <Label>Real footage</Label>
       <div style={{ flex: 1 }}>
         <Rise><Eyebrow>The audit trail</Eyebrow></Rise>
         <Rise delay={10}><div style={{ fontSize: 80, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1.08, marginTop: 20 }}>Every claim has a receipt.</div></Rise>
-        <div style={{ fontSize: 44, color: C.accent, fontWeight: 650, marginTop: 40, minHeight: 60 }}>{current}</div>
-        <Rise delay={300}><div style={{ fontSize: 32, color: C.ink2, marginTop: 30, lineHeight: 1.4 }}>Rules decide the money. The model only writes the message.</div></Rise>
+        <div style={{ fontSize: 44, color: C.accent, fontWeight: 650, marginTop: 40, minHeight: 60, opacity: k, transform: `translateY(${(1 - k) * 10}px)` }}>{current[1]}</div>
+        <Rise delay={820}><div style={{ fontSize: 32, color: C.ink2, marginTop: 30, lineHeight: 1.4 }}>Rules decide the money. The model only writes the message.</div></Rise>
       </div>
-      <div style={{ width: 520, height: 940, borderRadius: 48, overflow: "hidden", border: `1px solid ${C.line}`, boxShadow: "0 40px 100px rgba(0,0,0,.15)", background: "#fff" }}>
-        <Img src={staticFile("claim-light.png")} style={{ width: 520, transform: `translateY(${y}px)` }} />
+      <div style={{ width: 500, height: 1000, borderRadius: 48, overflow: "hidden", border: "12px solid #111", boxShadow: "0 40px 100px rgba(0,0,0,.18)", background: "#fff" }}>
+        <OffthreadVideo src={staticFile("audit.mp4")} muted style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} />
       </div>
     </AbsoluteFill>
   );
