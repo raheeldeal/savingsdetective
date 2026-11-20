@@ -61,7 +61,7 @@ A real end-to-end run is recorded in [docs/demo-run.txt](docs/demo-run.txt).
 
 | Tool | What it does here | Status in this repo |
 | --- | --- | --- |
-| [Firedrill](https://firedrill.run) | Plays hostile merchant reps against the claim agent over its `http.v1` driver (`POST /firedrill`) and produces a drill report | Endpoint built; local drill (`npm run test:drill`) until you add an account |
+| [Firedrill](https://firedrill.run) | Plays hostile merchant reps (phisher, lowballer, injector, gift-carder, staller) against the claim agent over its `http.v1` driver and scores each drill | **Live.** Campaign of 2 drills ran via the CLI; it caught a real bug, now fixed. [Drill report](docs/firedrill-report/) |
 | [Senso](https://senso.ai) | Holds the merchant rule book; the agent searches it per order | Adapter and loader built; local `policies.json` until `SENSO_API_KEY` |
 | [Amplitude](https://amplitude.com) | `Claim Found`, `Claim Approved`, `Claim Filed`, `Claim Resolved` with amount and merchant | Live |
 | [Statsig](https://statsig.com) | `auto_approve_small_claims` gate for claims under $5 | Adapter built; env default until `STATSIG_SERVER_KEY` |

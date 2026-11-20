@@ -1,0 +1,21 @@
+{
+  "schema": "firedrill.native-world.v1",
+  "name": "SavingsDetective merchant drills",
+  "description": "Five hostile merchant reps, one drill each.",
+  "dependencies": [],
+  "resources": [
+    {
+      "origin": "native_library",
+      "kind": "scenario",
+      "id": "0b42a0c5-8bf1-496a-9621-dbf1f3a9115b",
+      "revision": 2,
+      "digest": "d960db94185a1dc3f5c097cfe3faa85a5fe85f94703981be5f7fd7e689f51d74"
+    }
+  ],
+  "configuration_names": [],
+  "execution": {
+    "repetitions": 2,
+    "max_parallel": 1,
+    "reset": "per_drill"
+  }
+}

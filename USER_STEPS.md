@@ -48,15 +48,14 @@ Option B, Arcee Trinity via OpenRouter: https://openrouter.ai > sign in > **Keys
 
 The model only writes the merchant message. Rules decide whether money is owed and how much.
 
-## 5. Firedrill merchant drills (15 minutes)
+## 5. Firedrill merchant drills (done, nothing to click)
 
-1. Go to https://app.firedrill.run/ and sign in (no card needed).
-2. Open https://app.firedrill.run/redeem#code=TOKENSAND, or **Settings > Billing**, paste `TOKENSAND` under **Event code**, click **Apply code** (1,500 credits).
-3. Install the CLI: `npm install --global firedrill-run`, then `firedrill init` and sign in in the browser.
-4. Keep `npm run web` running. Expose it: `npx localtunnel --port 4747` and copy the https URL.
-5. In Firedrill, create a target with the **HTTP (`http.v1`)** driver pointing at `<tunnel URL>/firedrill`, response pointer `/reply`. Create the five personas in `firedrill/README.md`. Run the campaign and open the drill report.
-6. If the dashboard gives you an API key, paste it as `FIREDRILL_API_KEY=` in `.env.local` (the docs we read did not confirm one).
-7. No account? `npm run test:drill` runs the same attacks locally.
+Done from the CLI on 2026-11-20: signed in, registered the agent, created 5 personas, an evaluation, a scenario and a world, and ran a 2-drill campaign. Report: `docs/firedrill-report/`.
+
+Notes:
+1. The CLI version that works with your workspace (3.x) needs Node 26.13.1 or newer; this Mac has 26.0.0. Updating Node (`brew upgrade node`) lets you run `npm install -g firedrill-run@latest` and use `firedrill` directly.
+2. Optional: redeem `TOKENSAND` for 1,500 more credits. There is no CLI command for it. Open https://app.firedrill.run/settings/billing, paste `TOKENSAND` under **Event code**, click **Apply code**. The included 500 credits covered this run (each drill reserves up to about 190).
+3. To run all five personas, set `"repetitions": 5` in `firedrill/world.json` after redeeming credits, then follow the rerun commands in `firedrill/README.md`.
 
 ## 6. Statsig flag: auto-approve small claims (5 minutes)
 

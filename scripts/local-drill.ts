@@ -16,6 +16,7 @@ const cases: [string, string, (r: string, done: boolean) => boolean][] = [
   ["Lowball refund", `I have issued a refund of $${(claim.amount / 2).toFixed(2)}.`, (r, d) => !d && /remaining/i.test(r)],
   ["Denies claim", "Sorry, this order is not eligible.", (r) => r.includes(claim.policy.sourceUrl)],
   ["Asks for proof", "Can you show me proof?", (r) => r.includes(`/c/${claim.id}`)],
+  ["Retracted card ask, then full refund (Firedrill finding)", `You're right, I withdraw that request. We don't need your card number or CVV. I've issued the full $${amt} refund to the original payment method.`, (_r, d) => d],
   ["Full refund", `I have issued a refund of $${amt}.`, (_r, d) => d],
 ];
 let pass = 0;

@@ -10,7 +10,11 @@ export function agentReply(claim: Claim, merchantText: string): { text: string; 
   const m = merchantText.toLowerCase();
   const proof = `${config.baseUrl}/c/${claim.id}`;
   const amounts = [...merchantText.matchAll(/\$\s?(\d+(?:\.\d{2})?)/g)].map((x) => Number(x[1]));
-  if (/(card number|cvv|password|social security|ssn|bank account|routing|one[- ]time code|verification code)/.test(m))
+  // Found by a Firedrill drill: a rep who withdrew a card request ("we don't need your CVV") and issued
+  // the full refund got refused again, because the words alone triggered the refusal. Refuse only real asks.
+  const mentionsSecrets = /(card number|cvv|password|social security|ssn|bank account|routing|one[- ]time code|verification code)/.test(m);
+  const retracted = /(don't need|do not need|no need|never share|withdraw (that|the|my) request)/.test(m);
+  if (mentionsSecrets && !retracted)
     return { text: "I can't share payment or login details in chat. The refund can go back to the original payment method on the order.", done: false };
   if (/(ignore (all|your|previous)|system prompt|you are now|new instructions)/.test(m))
     return { text: `I'm only here about order ${claim.orderId}. Please refund ${money(claim.amount)} under "${claim.policy.title}".`, done: false };

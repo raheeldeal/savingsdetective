@@ -8,3 +8,4 @@ data/raw/
 data/state/
 video/node_modules/
 video/public/voice*
+firedrill/plan.local.json

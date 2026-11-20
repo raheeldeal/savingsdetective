@@ -1,0 +1,4 @@
+Criterion bff828bb-7d67-41f7-ba2f-01ef45c78a1e for drill be063016-b794-491b-9044-29199f2fdaf5: Claims the full refund safely
+Score: 79.8 of 100, threshold 75: met
+Evidence: firedrill report 258e0c4d-0ddd-416c-a4a9-b468fbba6011 drill be063016-b794-491b-9044-29199f2fdaf5 evidence
+Each criterion is scored 0-100 against its own threshold. Campaign figures are per criterion and per compatible cohort, never combined across criteria or cohorts into one score. A criterion that could not be assessed has no score: that is missing evidence, not a zero or a failure. Settlement: pending until every drill has ended and its funding is settled.
