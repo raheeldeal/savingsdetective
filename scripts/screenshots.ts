@@ -27,7 +27,9 @@ async function shot(url: string, file: string, opts: { w?: number; h?: number; d
 
 await shot(`${base}/`, "index-light.png", { full: true });
 await shot(`${base}/`, "index-dark.png", { dark: true });
-if (amazon) { await shot(`${base}/c/${amazon.id}`, "claim-light.png", { full: true }); await shot(`${base}/c/${amazon.id}`, "claim-dark.png", { dark: true, full: true }); await shot(`${base}/c/${amazon.id}`, "claim-top.png"); }
+const pending = state.claims.find((c: any) => c.status === "found") ?? amazon;
+if (amazon) { await shot(`${base}/c/${amazon.id}`, "claim-light.png", { full: true }); await shot(`${base}/c/${amazon.id}`, "claim-dark.png", { dark: true, full: true }); await shot(`${base}/c/${amazon.id}`, "claim-amazon-top.png"); }
+if (pending) { await shot(`${base}/c/${pending.id}`, "claim-top.png"); await shot(`${base}/c/${pending.id}`, "claim-pending-dark.png", { dark: true }); }
 if (resolved) await shot(`${base}/c/${resolved.id}`, "claim-resolved.png", { full: true });
 await shot(`${base}/phone`, "imessage-recreation.png", { w: 460, h: 860 });
 

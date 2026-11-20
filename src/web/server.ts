@@ -32,7 +32,7 @@ export function startServer(): Promise<http.Server> {
         const id = m[1];
         // Respond right away; filing runs in the background and the page refreshes itself.
         res.writeHead(303, { location: `/c/${id}` }); res.end();
-        approveClaim(id).then(() => { if (!load().claims.some((c) => c.status === "found")) return sendSummary(); }).catch((e) => console.error("[approve]", e));
+        approveClaim(id).then(() => sendSummary()).catch((e) => console.error("[approve]", e));
         return;
       }
       // Firedrill http.v1 driver: Firedrill plays merchant support, we answer as the agent.

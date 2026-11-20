@@ -31,7 +31,7 @@ export function indexPage() {
   const t = totals();
   const { household } = loadOrders();
   const claims = [...s.claims].sort((a, b) => (a.status === "found" ? -1 : 0) - (b.status === "found" ? -1 : 0) || b.amount - a.amount);
-  const rows = claims.map((c) => `<a href="/c/${c.id}">${logo(c.merchant)}<div class="grow"><div class="t1">${esc(c.merchantName)}: ${esc(c.policy.title)}</div><div class="t2">${esc(c.reason)}</div></div><div class="amt">${usd(c.amount)}<br>${status(c.status)}</div></a>`).join("");
+  const rows = claims.map((c) => `<a href="/c/${c.id}">${logo(c.merchant)}<div class="grow"><div class="t1">${esc(c.merchantName)}</div><div class="t2">${esc(c.reason)}</div></div><div class="amt">${usd(c.amount)}<br>${status(c.status)}</div></a>`).join("");
   const skips = s.skipped.map((k) => `<div class="skip"><div class="t1">${esc(k.merchantName)}: ${esc(k.title.slice(0, 48))}</div><div class="t2">${esc(k.reason)}</div></div>`).join("");
   const outbox = s.outbox.slice(-12).map((m) => `<div class="meta">${when(m.at)} · ${esc(m.delivered)}</div><div class="b">${linkify(m.text)}</div>`).join("");
   return page("SavingsDetective", `
@@ -89,7 +89,11 @@ export function claimPage(c: Claim) {
 /** A recreation of the iMessage thread for screenshots and the video. Labelled as such. */
 export function phonePage() {
   const s = load();
-  const msgs = s.outbox.slice(-6).map((m) => `<div class="pb">${linkify(m.text)}</div>`).join("");
+  // One claim's thread (Found, Filed, Approved) plus the latest savings summary.
+  const c = s.claims.find((x) => x.merchant === "amazon") ?? s.claims[0];
+  const summary = [...s.outbox].reverse().find((m) => m.text.startsWith("What I've saved"));
+  const list = c ? [c.messages[0], ...c.messages.slice(1), summary].filter(Boolean) as { text: string }[] : s.outbox.slice(-6);
+  const msgs = list.map((m) => `<div class="pb">${linkify(m.text)}</div>`).join("");
   return `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>iMessage recreation</title><style>
 body{margin:0;background:transparent;font:16px/1.3 -apple-system,BlinkMacSystemFont,"SF Pro Text",system-ui,sans-serif;display:grid;place-items:center;min-height:100vh}
 .phone{width:390px;height:780px;background:#fff;border-radius:54px;border:12px solid #111;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 30px 80px rgba(0,0,0,.25);position:relative}

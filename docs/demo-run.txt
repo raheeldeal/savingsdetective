@@ -1,0 +1,35 @@
+
+SavingsDetective adapters
+  Rule book          local
+  Clause ranking     local-lexical
+  Household memory   local
+  Feature flag       env
+  Drafting           template
+  Texts              console
+  Merchant           simulated
+  Activity log       local
+  Analytics          amplitude
+
+
+   iMessage  Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: http://localhost:4747/c/clm_56456548
+
+
+   iMessage  Found: Target dropped the price of your heated blanket by $7.00. Their price policy refunds the difference. Approve: http://localhost:4747/c/clm_8baa13ac
+
+
+   iMessage  Found: Costco dropped the price of your cast iron skillet by $8.00. Their price policy refunds the difference. Approve: http://localhost:4747/c/clm_00a1df4d
+
+
+   iMessage  Auto-approved (under $5.00): Best Buy dropped the price of your handheld vacuum by $4.95. Their price policy refunds the difference. Filed. Proof: http://localhost:4747/c/clm_8589d21e
+
+
+   iMessage  Auto-approved (under $5.00): Corner Cart Grocery delivered your coffee 2h late. Their on-time promise credits $3.00. Filed. Proof: http://localhost:4747/c/clm_f61be2e0
+
+
+   iMessage  What I've saved you: $7.95 recovered so far. $24.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://localhost:4747/
+
+[pass] 5 new claims, $32.90. 3 orders checked with nothing owed.
+--- user tapped Approve on the Amazon audit page ---
+   iMessage  Filed. Proof: http://localhost:4747/c/clm_56456548
+   iMessage  Amazon approved $9.95.
+   iMessage  What I've saved you: $17.90 recovered so far. $15.00 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://localhost:4747/
