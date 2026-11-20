@@ -132,7 +132,7 @@ const Thread = () => {
 const Audit = () => {
   const f = useCurrentFrame(); const dur = timings.segments.audit.frames;
   const y = interpolate(f, [50, dur - 30], [0, -4229], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
-  const notes: [number, string][] = [[0, "The amount and why"], [90, "The exact clause, with its source"], [180, "The evidence"], [250, "The merchant conversation"], [320, "Every step, timestamped"]];
+  const notes: [number, string][] = [[0, "The amount and why"], [50, "The exact clause, with its source"], [105, "The evidence"], [145, "The merchant conversation"], [265, "Every step, timestamped"]];
   const current = [...notes].reverse().find(([at]) => f >= at)![1];
   return (
     <AbsoluteFill style={{ flexDirection: "row", alignItems: "center", padding: "0 160px", gap: 120 }}>
