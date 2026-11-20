@@ -1,0 +1,57 @@
+{
+  "fps": 30,
+  "total": 2310,
+  "hasPhoneClip": false,
+  "segments": {
+    "title": {
+      "from": 0,
+      "frames": 120,
+      "audio": ""
+    },
+    "problem": {
+      "from": 120,
+      "frames": 180,
+      "audio": ""
+    },
+    "data": {
+      "from": 300,
+      "frames": 210,
+      "audio": ""
+    },
+    "thread": {
+      "from": 510,
+      "frames": 480,
+      "audio": ""
+    },
+    "audit": {
+      "from": 990,
+      "frames": 390,
+      "audio": ""
+    },
+    "index": {
+      "from": 1380,
+      "frames": 150,
+      "audio": ""
+    },
+    "arch": {
+      "from": 1530,
+      "frames": 270,
+      "audio": ""
+    },
+    "sponsors": {
+      "from": 1800,
+      "frames": 180,
+      "audio": ""
+    },
+    "honest": {
+      "from": 1980,
+      "frames": 120,
+      "audio": ""
+    },
+    "close": {
+      "from": 2100,
+      "frames": 210,
+      "audio": ""
+    }
+  }
+}
