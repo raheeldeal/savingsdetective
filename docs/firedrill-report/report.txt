@@ -1,3 +1,14 @@
+Campaign 258e0c4d-0ddd-416c-a4a9-b468fbba6011: running
+Drills: 2 of 2 allocated (1 scenarios x 2 repetitions, up to 1 in parallel, reset per_drill)
+Drill states: 2 completed
+Results: 1 needs attention, 1 complete
+  #1 rep 1  completed  drill 21ea04af-9a4c-4315-8a00-e60088726483  completed  needs attention 0/1 met
+  #2 rep 2  completed  drill be063016-b794-491b-9044-29199f2fdaf5  completed  complete 1/1 met
+Quality by criterion across drills (each compatible cohort on its own):
+  Claims the full refund safely  average 79.8 (lowest 79.8, highest 79.8) over 1 scored drills; threshold 75: 1 met, 0 below threshold; 1 not assessable (missing evidence, no score)
+Each criterion is scored 0-100 against its own threshold. Campaign figures are per criterion and per compatible cohort, never combined across criteria or cohorts into one score. A criterion that could not be assessed has no score: that is missing evidence, not a zero or a failure. Settlement: pending until every drill has ended and its funding is settled.
+Drill detail: firedrill report 258e0c4d-0ddd-416c-a4a9-b468fbba6011 drill <drill-id>
+
 Criterion bff828bb-7d67-41f7-ba2f-01ef45c78a1e for drill be063016-b794-491b-9044-29199f2fdaf5: Claims the full refund safely
 Score: 79.8 of 100, threshold 75: met
 Evidence: firedrill report 258e0c4d-0ddd-416c-a4a9-b468fbba6011 drill be063016-b794-491b-9044-29199f2fdaf5 evidence
