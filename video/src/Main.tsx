@@ -66,6 +66,11 @@ const Pain = () => {
           <Pop at={560}><Card style={{ padding: 32, width: 520 }}><div style={{ fontSize: 24, color: C.ink3 }}>Later that month</div><div style={{ fontSize: 44, fontWeight: 700, lineHeight: 1.1 }}>Amazon, 2h late</div><div style={{ fontSize: 22, color: C.ink2, marginTop: 10 }}>$9.95 guaranteed fee. Stolen packages are the bigger version of the same problem.</div></Card></Pop>
         </div>
         <Rise delay={640}><div style={{ fontSize: 34, color: C.ink2, marginTop: 50 }}>Nobody told Andy he was owed anything.</div></Rise>
+        <Pop at={700}><Card style={{ padding: "32px 40px", marginTop: 40, display: "flex", gap: 60, alignItems: "center", border: `2px solid ${C.warn}` }}>
+          <div><div style={{ fontSize: 22, color: C.ink3 }}>Owed to Andy this month</div><div style={{ fontSize: 84, fontWeight: 750, letterSpacing: "-0.04em", color: C.warn }}>$209.95</div></div>
+          <div><div style={{ fontSize: 22, color: C.ink3 }}>Claimed</div><div style={{ fontSize: 84, fontWeight: 750, letterSpacing: "-0.04em" }}>$0</div></div>
+          <div style={{ fontSize: 24, color: C.ink2, lineHeight: 1.4, maxWidth: 640 }}>A household like Andy's placed 308 Amazon orders in a year. If 2 to 3 percent carry a claim, that is roughly $150 to $230 a year left on the table. Assumptions in docs/video-sources.md.</div>
+        </Card></Pop>
       </>}
     </AbsoluteFill>
   );
@@ -104,10 +109,10 @@ const LAYERS: [string, string, [string, boolean, boolean][]][] = [
   ["Action", "merchant channel", [["Simulated merchant", true, true], ["Firedrill crash test", false, true]]],
   ["Audit", "receipts", [["Audit page", true, true], ["Amplitude events", false, true]]],
 ];
-const ORDER = ["Rule matcher", "Approval gate", "Audit page", "iMessage daemon", "Senso rule book", "Firedrill crash test", "Amplitude events", "Statsig auto-approve <$5", "Anthropic (words only)", "Cognee memory", "Superlinked rerank"];
+const ORDER = ["Rule matcher", "Approval gate", "Audit page", "iMessage daemon", "Simulated merchant", "Senso rule book", "Firedrill crash test", "Amplitude events", "Statsig auto-approve <$5", "Anthropic (words only)", "Cognee memory", "Superlinked rerank"];
 const Stack = () => {
   const f = useCurrentFrame(); const { fps } = useVideoConfig();
-  const at = (n: string) => { const i = ORDER.indexOf(n); return i < 0 ? 9999 : i < 4 ? 60 + i * 45 : 300 + (i - 4) * 120; };
+  const at = (n: string) => { const i = ORDER.indexOf(n); return i < 0 ? 9999 : i < 5 ? 60 + i * 42 : 330 + (i - 5) * 115; };
   return (
     <AbsoluteFill style={{ padding: "70px 120px" }}>
       <Rise><Eyebrow>What we built</Eyebrow><H size={56}>Six layers. Our parts, then the sponsors.</H></Rise>
