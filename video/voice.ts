@@ -9,14 +9,12 @@ const RATE = process.env.SAY_RATE || "178";
 
 export const SEGMENTS: { id: string; min: number; text: string }[] = [
   { id: "title", min: 6, text: "SavingsDetective. A personal agent that finds money merchants owe you, and claims it, with proof." },
-  { id: "problem", min: 12, text: "Merchants promise refunds for late deliveries and price drops. Almost nobody claims them. The households that lose the most are the ones with the least time to chase fees." },
-  { id: "data", min: 12, text: "We start from real Amazon orders from a family of three earning under twenty-five thousand dollars a year, from the Open E-commerce dataset. Then we simulate the service failures on top. Real purchases. Simulated failures." },
-  { id: "thread", min: 24, text: "SavingsDetective runs in the background. When it finds money, it texts you first. Amazon delivered the baby wipes two hours late, and their guarantee refunds the nine ninety five fee. You tap approve. It files the claim, and texts back when Amazon pays." },
-  { id: "audit", min: 33.5, text: "Every text links to an audit page. This is real footage. You see the exact policy clause and its source, then the evidence. One tap approves. The agent files the claim, the merchant pays, and the page keeps the full conversation and a timeline of every step. Rules decide whether money is owed. The model only writes the message." },
-  { id: "index", min: 12, text: "The home page shows what it recovered, what needs your OK, and what it missed, like a Target price drop that came five days too late." },
-  { id: "arch", min: 18, text: "Under the hood, a Node daemon reads orders, pulls policies from Senso, ranks the clauses, matches rules, and texts you through iMessage. A simulated merchant answers, and Firedrill crash tests the agent with hostile support reps." },
-  { id: "sponsors", min: 14, text: "Each sponsor tool sits behind an adapter with a local fallback. Senso, Firedrill, Amplitude, Statsig, Cognee, Superlinked, Guild, and Arcee." },
-  { id: "honest", min: 8, text: "To be clear: the merchant is simulated, and no real refund lands today. The audit trail is real." },
+  { id: "orders", min: 16, text: "These are real Amazon orders from a family of three earning under twenty-five thousand dollars a year. Nine orders. Nobody flagged anything. On top of the real items we simulate the service failures a family like this runs into every month." },
+  { id: "rulebook", min: 30, text: "The agent does not guess. For every order it pulls the merchant's written policy from the Senso rule book, with the clause and its source link. Then a deterministic check runs the numbers. The monitor was bought for four ninety nine. Best Buy now sells it for three seventy nine. That is day nine of a fifteen day window. One hundred and twenty dollars is owed. No model decides the money." },
+  { id: "negative", min: 16, text: "It also says no. The floor fan from Target dropped ten dollars, but on day eighteen. Target's window is fourteen days. The agent records why it did not file, so you can see the misses as well as the wins." },
+  { id: "transcript", min: 30, text: "When you approve, the agent opens a chat with merchant support. The rep offers a three dollar gift card. The agent declines, quotes the clause, and asks for the refund to the original payment method. It gets the full one twenty in cash. Before it ever talks to a merchant, we crash test it. Eight hostile reps: phishing for card numbers, prompt injection, lowball refunds. Eight passes." },
+  { id: "audit", min: 34, text: "Every text links to an audit page. This is real footage. The amount, the clause and its source, the evidence, one tap to approve, the full merchant conversation, a timestamped trail of every step, and where each piece of data came from. Real purchase, simulated failure, labelled." },
+  { id: "phone", min: 16, text: "And the whole thing is a text thread. Found. Filed. Paid. Then: what I've saved you. One hundred and fifty-two dollars for a family that never had time to chase it." },
   { id: "close", min: 11, text: "Instinct is a concierge for people who can afford one. SavingsDetective is a collections agent for everyone else." },
 ];
 
@@ -33,7 +31,7 @@ for (const s of SEGMENTS) {
   const frames = Math.ceil(Math.max(s.min, secs + 1.4) * FPS);
   out[s.id] = { from, frames, audio: `voice-${s.id}.wav` };
   from += frames;
-  console.log(`${s.id.padEnd(9)} ${secs.toFixed(1)}s audio, ${(frames / FPS).toFixed(1)}s segment`);
+  console.log(`${s.id.padEnd(10)} ${secs.toFixed(1)}s audio, ${(frames / FPS).toFixed(1)}s segment`);
 }
 const hasPhoneClip = fs.existsSync("public/phone.mp4");
 fs.writeFileSync("src/timings.json", JSON.stringify({ fps: FPS, total: from, hasPhoneClip, segments: out }, null, 2));

@@ -6,10 +6,30 @@
     "state": "California",
     "source": "Open E-commerce 1.0 survey.csv (Berke et al., Harvard Dataverse, doi:10.7910/DVN/YGLYDY)"
   },
-  "generatedAt": "2026-11-20T21:48:09.124Z",
+  "generatedAt": "2026-11-21T00:00:20.040Z",
   "orders": [
     {
       "id": "ord_01",
+      "merchant": "bestbuy",
+      "title": "ASUS TUF Gaming VG27VQ 27” Curved Monitor, 1080P Full HD, 165Hz (Supports 144Hz), Freesync, 1ms, Extreme Low Motion Blur, Eye Care, DisplayPort HDMI,Black",
+      "asin": "B07YYWVBQ8",
+      "category": "MONITOR",
+      "price": 499,
+      "qty": 1,
+      "orderedAt": "2026-11-10T18:00:00.000Z",
+      "delivery": null,
+      "priceCheck": {
+        "priceNow": 379,
+        "seenAt": "2026-11-20T17:00:00.000Z"
+      },
+      "provenance": {
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-16 on Amazon (dataset price $219.99; demo uses a simulated $499 purchase price)",
+        "merchant": "Simulated: merchant reassigned for the demo",
+        "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
+      }
+    },
+    {
+      "id": "ord_02",
       "merchant": "amazon",
       "title": "Baby Wipes, Pampers Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, 8 Pop-Top Packs with 4 Refill Packs for Dispenser Tub, 864 Total Wipes (Packaging May Vary)",
       "asin": "B07JRBSPZ3",
@@ -31,7 +51,7 @@
       }
     },
     {
-      "id": "ord_02",
+      "id": "ord_03",
       "merchant": "target",
       "title": "Wchiuoe Heated Blanket, 62\"x84\" 10 Heating Levels & 2-10H Auto Off Electric Blanket, Machine Washable Soft Flannel Fast Heating Throw Blanket for Bedroom Office Couch…",
       "asin": "B09ZPFGLYH",
@@ -51,7 +71,7 @@
       }
     },
     {
-      "id": "ord_03",
+      "id": "ord_04",
       "merchant": "costco",
       "title": "cuisinel Cast Iron Skillet + Lid - 2-In-1 Multi Cooker - Deep Pot + Frying Pan - 3-Qt Dutch Oven - Pre-Seasoned Oven Safe Cookware - Indoor/Outdoor - Grill, Stovetop, Induction Safe - Great for Bread",
       "asin": "B076PR8LT5",
@@ -71,7 +91,7 @@
       }
     },
     {
-      "id": "ord_04",
+      "id": "ord_05",
       "merchant": "bestbuy",
       "title": "beyond by BLACK+DECKER dustbuster® - Handheld Vacuum Cleaner - Cordless, Icy Blue - Mini Vacuum Cleaner (Model Number: HNVC215B12AEV)",
       "asin": "B08B6CJ9RT",
@@ -91,7 +111,7 @@
       }
     },
     {
-      "id": "ord_05",
+      "id": "ord_06",
       "merchant": "target",
       "title": "HealSmart 20 Inch 3-Speed High Velocity Heavy Duty Metal Industrial Floor Fans Quiet for Home, Commercial, Residential, and Greenhouse Use, Outdoor/Indoor, Black, 20\"",
       "asin": "B08M9BYMY8",
@@ -111,7 +131,7 @@
       }
     },
     {
-      "id": "ord_06",
+      "id": "ord_07",
       "merchant": "cornercart",
       "title": "Community Coffee Café Special Half-Caff Ground Coffee, Medium Dark Roast, 32 Ounce Bag (Pack of 2)",
       "asin": "B018LJZHVS",
@@ -133,7 +153,7 @@
       }
     },
     {
-      "id": "ord_07",
+      "id": "ord_08",
       "merchant": "amazon",
       "title": "Energizer AAA Batteries, Triple A Long-Lasting Alkaline Power Batteries, 32 Count (Pack of 1)",
       "asin": "B09RTVN5GN",
@@ -155,7 +175,7 @@
       }
     },
     {
-      "id": "ord_08",
+      "id": "ord_09",
       "merchant": "amazon",
       "title": "Hook On Chair, VEEYOO Clip On High Chair Folding Fast Table Chair with Storage Bag, Portable Baby Feeding Seat Attach to Table for Home and Travel",
       "asin": "B08QRGPSVP",

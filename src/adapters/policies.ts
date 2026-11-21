@@ -29,7 +29,8 @@ export async function candidatesFor(order: Order): Promise<{ source: string; pol
   const mine = local.filter((p) => p.merchant === order.merchant);
   if (policyEngine() === "senso") {
     try {
-      const chunks = await sensoSearch(`${order.merchant} refund policy late delivery price drop`);
+      const name = mine[0]?.merchantName ?? order.merchant;
+      const chunks = await sensoSearch(`${name} ${order.delivery ? "late delivery guarantee refund" : "price match lower price refund difference"}`);
       const ids = new Set(chunks.flatMap((t) => [...t.matchAll(/policy_id:\s*([\w-]+)/g)].map((m) => m[1])));
       const found = local.filter((p) => ids.has(p.id) && p.merchant === order.merchant);
       if (found.length) return { source: "senso", policies: found };

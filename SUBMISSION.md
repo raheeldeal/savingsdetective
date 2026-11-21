@@ -1,38 +1,54 @@
-# Submission
+# Submission packet (paste into the tokensand form)
 
-## Title
+## Title (under 300 characters)
 
-SavingsDetective: a personal agent that finds money merchants owe you, texts you, and claims it with an audit trail of every step.
+SavingsDetective: a personal agent that finds money merchants owe you, texts you, and claims it with an audit trail. In one pass it found $152.90 for a family earning under $25k, led by a $120 Best Buy price drop nobody had noticed.
 
-## What does it do, and for whom?
+## What does it do, and for whom? (under 1,500 characters)
 
-Merchants promise money back for late deliveries and price drops, and almost nobody claims it. The households that lose the most are the ones with the least time to chase fees.
+A family of three earning under $25,000 bought a $499 monitor at Best Buy. Nine days later Best Buy dropped it to $379. Best Buy's own Price Match Guarantee owes them $120. Nobody told them, and nobody in that house has an afternoon to spend on hold.
 
-SavingsDetective runs in the background on your Mac. It checks your orders against each merchant's written policy and texts you over iMessage when it finds money: "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: <link>". One tap approves. The agent then chats with merchant support, cites the exact clause, refuses gift cards and lowballs, and texts back when it's paid.
+SavingsDetective is a background agent on your Mac that checks every order against each merchant's written policy and texts you over iMessage when it finds money: "Found: Best Buy dropped the price of your monitor by $120. Approve: <link>". One tap approves. The agent opens a chat with merchant support, quotes the clause, refuses the $3 gift card it gets offered, and texts back when the cash lands.
 
-Every text links to an audit page: the amount, the clause and its source URL, the evidence, the full merchant transcript, and a timestamped trail of every step. Rules decide whether money is owed. The model only words the message.
+Every text links to an audit page: the amount, the clause and its source URL, the evidence with the numbers, the full merchant transcript, a timestamped trail of every step, and which fields are real versus simulated. Deterministic rules decide whether money is owed and how much. Claude only words the message.
 
-The demo uses real Amazon orders from a family of three earning under $25,000 a year (Open E-commerce 1.0, Harvard Dataverse) with simulated service failures, and finds $32.90 across five claims. The merchants are simulated; Firedrill crash-tests the agent with hostile support reps.
+It also records what it did not file: a Target price drop that landed on day 18 of a 14-day window, with the reason.
+
+The demo runs on real Amazon orders from Open E-commerce 1.0 (Harvard Dataverse) with simulated service failures. Merchants are simulated. Before the agent talks to one, Firedrill-style crash tests throw eight hostile reps at it: card-number phishing, prompt injection, lowballs. Eight passes.
 
 Instinct is a concierge for people who can afford one. SavingsDetective is a collections agent for everyone else.
 
-## Tools used
+## Tools used (tick these sponsor names)
 
-- Firedrill: hostile merchant reps over the `http.v1` driver, plus a local drill report
-- Senso: merchant policy rule book (adapter, local fallback)
-- Amplitude: claim lifecycle events (live)
-- Statsig: auto-approve-under-$5 feature gate (adapter, env fallback)
-- Cognee: household memory (adapter, local fallback)
-- Superlinked SIE: clause reranking (adapter, local fallback)
-- Arcee Trinity via OpenRouter, or Claude: drafting merchant messages (adapter, template fallback)
-- Guild AI: activity log (local)
-- macOS Messages via AppleScript, Node 26, Remotion for the video, Puppeteer for screenshots
+- Senso.ai: live. The merchant rule book; every claim's clause is retrieved from Senso.
+- Firedrill: integrated. `POST /firedrill` speaks the `http.v1` driver; CLI signed in; local drill report in `docs/drill-report.txt`. Cloud campaign not yet run.
+- Amplitude + Statsig: live. Four claim lifecycle events; `auto_approve_small_claims` gate.
+- Cognee: adapter built, local fallback.
+- Superlinked: adapter built, local fallback.
+- Arcee AI: adapter built (Trinity via OpenRouter); Anthropic Claude is the live drafting model today.
+- Guild AI: local activity log only.
+
+Also: Anthropic Claude Sonnet 4.5 (drafting), macOS Messages via AppleScript (live texts to the user's phone), Node 26, Remotion, Puppeteer.
 
 ## Links
 
+- Working project URL: none, local-first (runs on the user's Mac and texts their phone). `npm run demo` in the repo.
 - Repo: https://github.com/raheeldeal/savingsdetective
-- Video: `video/out/savingsdetective.mp4`
+- Video: `video/out/savingsdetective.mp4` (2 min 40 s)
+- Screenshot: `docs/hero.png` (alt: `docs/claim-top.png`)
 
-## Suggested screenshot
+## 90-second spoken demo script (live finalist round)
 
-`docs/hero.png` (also `docs/claim-top.png` for a phone-width audit page)
+**0:00 The orders.** "These are real Amazon orders from a family of three earning under twenty-five thousand a year. Nine orders. Nobody flagged anything. We layer simulated service failures on top and label them."
+
+**0:12 The rule book.** "The agent doesn't guess. It pulls Best Buy's Price Match Guarantee from Senso, with the clause and source link, then runs the numbers: paid $499, now $379, day 9 of 15. Owed: $120. Rules decide the money. The model only writes the message."
+
+**0:30 The miss.** "It also says no. Target dropped a fan $10, but on day 18 of a 14-day window. It records why it didn't file, so you see misses next to wins."
+
+**0:42 The conversation.** "On approve, it chats with Best Buy support. The rep offers a $3 gift card. The agent declines, quotes the clause, gets the full $120 to the card. Before it talks to anyone, we crash-test it: eight hostile reps, card phishing, prompt injection, lowballs. Eight passes."
+
+**1:00 The audit page.** "Every text links here. Amount, clause, evidence, one tap to approve, the transcript, a timestamped trail, and where each field came from: real purchase, simulated failure."
+
+**1:15 The thread.** "The whole UX is iMessage. Found. Filed. Paid. Then: what I've saved you. $152.90 in one pass."
+
+**1:25 Close.** "Instinct is a concierge for people who can afford one. SavingsDetective is a collections agent for everyone else."

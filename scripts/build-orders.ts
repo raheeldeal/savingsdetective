@@ -9,7 +9,7 @@ import path from "node:path";
 const dir = process.argv[2] ?? "data/raw/open-ecommerce";
 const RESPONSE_ID = "R_3HigTq4itishziE"; // chosen by scripts/pick-household.ts
 const WANT: Record<string, string> = {
-  B07JRBSPZ3: "amazon_late", B09ZPFGLYH: "target_drop", B076PR8LT5: "costco_drop",
+  B07YYWVBQ8: "bestbuy_tv", B07JRBSPZ3: "amazon_late", B09ZPFGLYH: "target_drop", B076PR8LT5: "costco_drop",
   B08B6CJ9RT: "bestbuy_drop", B08M9BYMY8: "target_expired", B018LJZHVS: "corner_late",
   B09RTVN5GN: "amazon_clean", B08QRGPSVP: "amazon_clean2",
 };
@@ -48,6 +48,7 @@ for await (const line of rl) {
 // Demo clock: orders are re-dated relative to "today" so windows are live. Real price and title are kept.
 const day = (n: number, hh = 12) => { const d = new Date(); d.setDate(d.getDate() - n); d.setHours(hh, 0, 0, 0); return d.toISOString(); };
 const sim: Record<string, any> = {
+  bestbuy_tv: { merchant: "bestbuy", daysAgo: 10, pricePaid: 499, priceNow: 379, priceSeenAt: () => day(0, 9) },
   amazon_late: { merchant: "amazon", daysAgo: 2, shippingFee: 9.95, shippingType: "Guaranteed One-Day Delivery",
     promisedBy: () => day(1, 22), deliveredAt: () => { const d = new Date(day(1, 22)); d.setHours(d.getHours() + 2, 14); return d.toISOString(); } },
   target_drop: { merchant: "target", daysAgo: 6, priceNow: 39.99, priceSeenAt: () => day(0, 9) },
@@ -68,12 +69,12 @@ const orders = Object.entries(WANT).map(([asin, key], i) => {
   return {
     id: `ord_${String(i + 1).padStart(2, "0")}`,
     merchant: s.merchant,
-    title: r.title, asin: r.asin, category: r.category, price: r.price, qty: r.qty,
+    title: r.title, asin: r.asin, category: r.category, price: s.pricePaid ?? r.price, qty: r.qty,
     orderedAt: day(s.daysAgo, 10),
     delivery: s.promisedBy ? { type: s.shippingType, fee: s.shippingFee, promisedBy: s.promisedBy(), deliveredAt: s.deliveredAt() } : null,
     priceCheck: s.priceNow ? { priceNow: s.priceNow, seenAt: s.priceSeenAt() } : null,
     provenance: {
-      item: `Real purchase: Open E-commerce 1.0, household ${RESPONSE_ID}, ordered ${r.originalDate} on Amazon`,
+      item: `Real purchase: Open E-commerce 1.0, household ${RESPONSE_ID}, ordered ${r.originalDate} on Amazon${s.pricePaid ? ` (dataset price $${r.price}; demo uses a simulated $${s.pricePaid} purchase price)` : ""}`,
       merchant: s.merchant === "amazon" ? "Real merchant" : "Simulated: merchant reassigned for the demo",
       failure: "Simulated service failure (delivery times, price changes and dates are synthetic)",
     },

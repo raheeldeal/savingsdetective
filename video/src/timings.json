@@ -1,6 +1,6 @@
 {
   "fps": 30,
-  "total": 4612,
+  "total": 4804,
   "hasPhoneClip": false,
   "segments": {
     "title": {
@@ -8,48 +8,38 @@
       "frames": 214,
       "audio": "voice-title.wav"
     },
-    "problem": {
+    "orders": {
       "from": 214,
-      "frames": 360,
-      "audio": "voice-problem.wav"
+      "frames": 480,
+      "audio": "voice-orders.wav"
     },
-    "data": {
-      "from": 574,
-      "frames": 423,
-      "audio": "voice-data.wav"
+    "rulebook": {
+      "from": 694,
+      "frames": 900,
+      "audio": "voice-rulebook.wav"
     },
-    "thread": {
-      "from": 997,
-      "frames": 720,
-      "audio": "voice-thread.wav"
+    "negative": {
+      "from": 1594,
+      "frames": 480,
+      "audio": "voice-negative.wav"
+    },
+    "transcript": {
+      "from": 2074,
+      "frames": 900,
+      "audio": "voice-transcript.wav"
     },
     "audit": {
-      "from": 1717,
-      "frames": 1005,
+      "from": 2974,
+      "frames": 1020,
       "audio": "voice-audit.wav"
     },
-    "index": {
-      "from": 2722,
-      "frames": 360,
-      "audio": "voice-index.wav"
-    },
-    "arch": {
-      "from": 3082,
-      "frames": 540,
-      "audio": "voice-arch.wav"
-    },
-    "sponsors": {
-      "from": 3622,
-      "frames": 420,
-      "audio": "voice-sponsors.wav"
-    },
-    "honest": {
-      "from": 4042,
-      "frames": 240,
-      "audio": "voice-honest.wav"
+    "phone": {
+      "from": 3994,
+      "frames": 480,
+      "audio": "voice-phone.wav"
     },
     "close": {
-      "from": 4282,
+      "from": 4474,
       "frames": 330,
       "audio": "voice-close.wav"
     }

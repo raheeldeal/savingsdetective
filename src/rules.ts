@@ -4,7 +4,7 @@ import type { Order, Policy } from "./types.ts";
 export const SHORT: Record<string, string> = {
   SKIN_CLEANING_WIPE: "baby wipes", BLANKET: "heated blanket", SAUTE_FRY_PAN: "cast iron skillet",
   VACUUM_CLEANER: "handheld vacuum", ELECTRIC_FAN: "floor fan", COFFEE: "coffee",
-  BATTERY: "AAA batteries", BABY_SEAT: "clip-on high chair",
+  BATTERY: "AAA batteries", BABY_SEAT: "clip-on high chair", MONITOR: "27-inch monitor",
 };
 export const shortName = (o: Order) => SHORT[o.category] ?? o.title.split(/[,(-]/)[0].trim().slice(0, 32);
 

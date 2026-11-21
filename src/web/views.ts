@@ -79,7 +79,7 @@ export function claimPage(c: Claim) {
 <h2>Merchant conversation <span class="chip sim" style="margin-left:6px;vertical-align:1px"><span class="dot"></span>Simulated</span></h2><div class="card chat">${chat}</div>
 <h2>Audit trail</h2><div class="card"><ol class="tl">${tl}</ol></div>
 <h2>Where this data came from</h2><div class="card prov">
-<p><span class="chip ok">Real</span><span>${esc(c.provenance.item)}. Item, ASIN ${esc(c.order.asin)} and price ${usd(c.order.price)} are from the dataset.</span></p>
+<p><span class="chip ok">Real</span><span>${esc(c.provenance.item)}. Item and ASIN ${esc(c.order.asin)} are from the dataset.</span></p>
 <p><span class="chip ${c.merchant === "amazon" ? "ok" : "sim"}">${c.merchant === "amazon" ? "Real" : "Simulated"}</span><span>${esc(c.provenance.merchant)}.</span></p>
 <p><span class="chip sim">Simulated</span><span>${esc(c.provenance.failure)}.</span></p>
 <p><span class="chip">Raw</span><span><a href="/api/claims/${c.id}">Full claim record as JSON</a></span></p></div>`,
