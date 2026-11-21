@@ -38,7 +38,7 @@ Checked luma.com/tokensand, luma.com/personalagenthack, tokensand.com and tokens
 
 - Working project URL: none, local-first (runs on the user's Mac and texts their phone). `npm run demo` in the repo.
 - Repo: https://github.com/raheeldeal/savingsdetective
-- Video: `video/out/savingsdetective.mp4` (about 2 min)
+- Video: `video/out/savingsdetective.mp4` (2 min 19 s)
 - Screenshot: `docs/hero.png` (alt: `docs/claim-top.png`)
 
 ## 90-second spoken demo script (live finalist round)
