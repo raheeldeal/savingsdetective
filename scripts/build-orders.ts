@@ -28,6 +28,7 @@ const survey = fs.readFileSync(path.join(dir, "survey.tsv"), "utf8").split(/\r?\
 const h = parse(survey[0], "\t");
 const row = survey.map((l) => parse(l, "\t")).find((r) => r[0] === RESPONSE_ID)!;
 const household = {
+  name: "Andy",
   responseId: RESPONSE_ID,
   income: row[h.indexOf("Q-demos-income")],
   size: Number(row[h.indexOf("Q-amazon-use-hh-size")]),
@@ -48,7 +49,7 @@ for await (const line of rl) {
 // Demo clock: orders are re-dated relative to "today" so windows are live. Real price and title are kept.
 const day = (n: number, hh = 12) => { const d = new Date(); d.setDate(d.getDate() - n); d.setHours(hh, 0, 0, 0); return d.toISOString(); };
 const sim: Record<string, any> = {
-  bestbuy_tv: { merchant: "bestbuy", daysAgo: 10, pricePaid: 499, priceNow: 379, priceSeenAt: () => day(0, 9) },
+  bestbuy_tv: { merchant: "bestbuy", daysAgo: 10, pricePaid: 699, priceNow: 499, priceSeenAt: () => day(0, 9) },
   amazon_late: { merchant: "amazon", daysAgo: 2, shippingFee: 9.95, shippingType: "Guaranteed One-Day Delivery",
     promisedBy: () => day(1, 22), deliveredAt: () => { const d = new Date(day(1, 22)); d.setHours(d.getHours() + 2, 14); return d.toISOString(); } },
   target_drop: { merchant: "target", daysAgo: 6, priceNow: 39.99, priceSeenAt: () => day(0, 9) },

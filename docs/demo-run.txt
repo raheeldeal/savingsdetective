@@ -8,16 +8,16 @@ SavingsDetective adapters
   Merchant           simulated
   Activity log       local
   Analytics          amplitude
-   iMessage  Found: Best Buy dropped the price of your 27-inch monitor by $120.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b
+   iMessage  Found: Best Buy dropped the price of your 27-inch monitor by $200.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b
    iMessage  Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: http://172.24.40.180:4747/c/clm_50bc90e0
    iMessage  Found: Target dropped the price of your heated blanket by $7.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_9273a250
    iMessage  Found: Costco dropped the price of your cast iron skillet by $8.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_a126cd7c
    iMessage  Auto-approved (under $5.00): Best Buy dropped the price of your handheld vacuum by $4.95. Their price policy refunds the difference. Filed. Proof: http://172.24.40.180:4747/c/clm_88290e6f
    iMessage  Auto-approved (under $5.00): Corner Cart Grocery delivered your coffee 2h late. Their on-time promise credits $3.00. Filed. Proof: http://172.24.40.180:4747/c/clm_c3d7321f
-   iMessage  What I've saved you: $7.95 recovered so far. $144.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/
-[pass] 6 new claims, $152.90. 3 orders checked with nothing owed.
---- user tapped Approve on the Best Buy audit page ---
+   iMessage  What I've saved you: $7.95 recovered so far. $224.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/
+[pass] 6 new claims, $232.90. 3 orders checked with nothing owed.
+--- Andy tapped Approve on the Best Buy audit page ---
    iMessage  Filed. Proof: http://172.24.40.180:4747/c/clm_aeaeba6b
-   iMessage  Best Buy approved $120.00.
-   iMessage  What I've saved you: $127.95 recovered so far. $24.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/
-{'Best Buy': ('resolved', 4.95, 'senso'), 'Amazon': ('found', 9.95, 'senso'), 'Target': ('found', 7, 'senso'), 'Costco': ('found', 8, 'senso'), 'Corner Cart Grocery': ('resolved', 3, 'senso')}
+   iMessage  Best Buy approved $200.00.
+   iMessage  What I've saved you: $207.95 recovered so far. $24.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/
+232.89999999999998 [('Best Buy', 'resolved', 'senso'), ('Amazon', 'found', 'senso'), ('Target', 'found', 'senso'), ('Costco', 'found', 'senso'), ('Best Buy', 'resolved', 'senso'), ('Corner Cart Grocery', 'resolved', 'senso')]

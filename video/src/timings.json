@@ -1,46 +1,31 @@
 {
   "fps": 30,
-  "total": 4804,
+  "total": 3600,
   "hasPhoneClip": false,
   "segments": {
-    "title": {
+    "pain": {
       "from": 0,
-      "frames": 214,
-      "audio": "voice-title.wav"
+      "frames": 750,
+      "audio": "voice-pain.wav"
     },
-    "orders": {
-      "from": 214,
-      "frames": 480,
-      "audio": "voice-orders.wav"
+    "enter": {
+      "from": 750,
+      "frames": 750,
+      "audio": "voice-enter.wav"
     },
-    "rulebook": {
-      "from": 694,
-      "frames": 900,
-      "audio": "voice-rulebook.wav"
+    "stack": {
+      "from": 1500,
+      "frames": 1200,
+      "audio": "voice-stack.wav"
     },
-    "negative": {
-      "from": 1594,
-      "frames": 480,
-      "audio": "voice-negative.wav"
-    },
-    "transcript": {
-      "from": 2074,
-      "frames": 900,
-      "audio": "voice-transcript.wav"
-    },
-    "audit": {
-      "from": 2974,
-      "frames": 1020,
-      "audio": "voice-audit.wav"
-    },
-    "phone": {
-      "from": 3994,
-      "frames": 480,
-      "audio": "voice-phone.wav"
+    "fight": {
+      "from": 2700,
+      "frames": 600,
+      "audio": "voice-fight.wav"
     },
     "close": {
-      "from": 4474,
-      "frames": 330,
+      "from": 3300,
+      "frames": 300,
       "audio": "voice-close.wav"
     }
   }

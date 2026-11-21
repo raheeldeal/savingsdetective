@@ -33,7 +33,7 @@ export async function runPass(opts: { quiet?: boolean } = {}): Promise<{ found: 
   const { household, orders } = loadOrders();
   const state = load();
   const known = new Set([...state.claims.map((c) => c.orderId), ...state.skipped.map((s) => s.orderId)]);
-  if (!state.runs.length) await remember(`Household profile: ${household.size} people, income ${household.income}, ${household.state}. Source: ${household.source}.`);
+  if (!state.runs.length) await remember(`Household profile: ${household.name ?? "user"}, ${household.size} people, income ${household.income}, ${household.state}. Source: ${household.source}.`);
   const found: Claim[] = [];
   const skipped: typeof state.skipped = [];
 

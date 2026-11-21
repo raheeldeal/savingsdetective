@@ -36,9 +36,9 @@ export function indexPage() {
   const outbox = s.outbox.slice(-12).map((m) => `<div class="meta">${when(m.at)} · ${esc(m.delivered)}</div><div class="b">${linkify(m.text)}</div>`).join("");
   return page("SavingsDetective", `
 <section class="hero">
-  <p class="eyebrow">Recovered for your household</p>
+  <p class="eyebrow">Recovered for ${esc(household.name ?? "your")}'s household</p>
   <p class="big">${usd(t.recovered)}</p>
-  <p class="sub">Household of ${household.size}, ${esc(household.state)}, income ${esc(household.income.toLowerCase())}. ${s.runs.length} ${s.runs.length === 1 ? "check" : "checks"} run, last ${s.runs.length ? when(s.runs.at(-1)!.at) : "never"}.</p>
+  <p class="sub">${esc(household.name ?? "Household")}, household of ${household.size}, ${esc(household.state)}, income ${esc(household.income.toLowerCase())}. ${s.runs.length} ${s.runs.length === 1 ? "check" : "checks"} run, last ${s.runs.length ? when(s.runs.at(-1)!.at) : "never"}.</p>
   <div class="stats"><div class="stat"><b>${usd(t.found)}</b><span>Found</span></div><div class="stat"><b>${usd(t.pending)}</b><span>Needs your OK</span></div><div class="stat"><b>${t.count}</b><span>Claims</span></div></div>
 </section>
 <h2>Claims</h2><div class="card list">${rows || '<div class="skip"><div class="t2">No claims yet. Run <code>npm run demo</code>.</div></div>'}</div>

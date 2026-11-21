@@ -1,12 +1,13 @@
 {
   "household": {
+    "name": "Andy",
     "responseId": "R_3HigTq4itishziE",
     "income": "Less than $25,000",
     "size": 3,
     "state": "California",
     "source": "Open E-commerce 1.0 survey.csv (Berke et al., Harvard Dataverse, doi:10.7910/DVN/YGLYDY)"
   },
-  "generatedAt": "2026-11-21T00:00:20.040Z",
+  "generatedAt": "2026-11-21T00:06:01.445Z",
   "orders": [
     {
       "id": "ord_01",
@@ -14,16 +15,16 @@
       "title": "ASUS TUF Gaming VG27VQ 27” Curved Monitor, 1080P Full HD, 165Hz (Supports 144Hz), Freesync, 1ms, Extreme Low Motion Blur, Eye Care, DisplayPort HDMI,Black",
       "asin": "B07YYWVBQ8",
       "category": "MONITOR",
-      "price": 499,
+      "price": 699,
       "qty": 1,
       "orderedAt": "2026-11-10T18:00:00.000Z",
       "delivery": null,
       "priceCheck": {
-        "priceNow": 379,
+        "priceNow": 499,
         "seenAt": "2026-11-20T17:00:00.000Z"
       },
       "provenance": {
-        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-16 on Amazon (dataset price $219.99; demo uses a simulated $499 purchase price)",
+        "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-16 on Amazon (dataset price $219.99; demo uses a simulated $699 purchase price)",
         "merchant": "Simulated: merchant reassigned for the demo",
         "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
       }

@@ -5,9 +5,9 @@
    "orderId": "ord_01",
    "merchant": "bestbuy",
    "merchantName": "Best Buy",
-   "amount": 120,
-   "reason": "Price dropped $120.00 on day 9 of a 15-day window.",
-   "headline": "Best Buy dropped the price of your 27-inch monitor by $120.00. Their price policy refunds the difference.",
+   "amount": 200,
+   "reason": "Price dropped $200.00 on day 9 of a 15-day window.",
+   "headline": "Best Buy dropped the price of your 27-inch monitor by $200.00. Their price policy refunds the difference.",
    "policy": {
     "id": "bestbuy-price-match",
     "title": "Price Match Guarantee",
@@ -27,15 +27,15 @@
      }
     ]
    },
-   "deadline": "2026-11-25T18:00:00.161Z",
+   "deadline": "2026-11-25T18:00:00.247Z",
    "evidence": [
     {
      "label": "You paid",
-     "value": "$499.00 on Tue, Nov 10, 10:00 AM"
+     "value": "$699.00 on Tue, Nov 10, 10:00 AM"
     },
     {
      "label": "Price now",
-     "value": "$379.00 (seen Fri, Nov 20, 9:00 AM)"
+     "value": "$499.00 (seen Fri, Nov 20, 9:00 AM)"
     },
     {
      "label": "Days since purchase",
@@ -43,150 +43,150 @@
     },
     {
      "label": "Difference",
-     "value": "$120.00"
+     "value": "$200.00"
     }
    ],
    "provenance": {
-    "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-16 on Amazon (dataset price $219.99; demo uses a simulated $499 purchase price)",
+    "item": "Real purchase: Open E-commerce 1.0, household R_3HigTq4itishziE, ordered 2022-07-16 on Amazon (dataset price $219.99; demo uses a simulated $699 purchase price)",
     "merchant": "Simulated: merchant reassigned for the demo",
     "failure": "Simulated service failure (delivery times, price changes and dates are synthetic)"
    },
    "order": {
     "title": "ASUS TUF Gaming VG27VQ 27\u201d Curved Monitor, 1080P Full HD, 165Hz (Supports 144Hz), Freesync, 1ms, Extreme Low Motion Blur, Eye Care, DisplayPort HDMI,Black",
     "asin": "B07YYWVBQ8",
-    "price": 499,
-    "orderedAt": "2026-11-10T18:00:00.161Z",
+    "price": 699,
+    "orderedAt": "2026-11-10T18:00:00.247Z",
     "category": "MONITOR"
    },
    "status": "resolved",
    "autoApproved": false,
    "draft": {
-    "text": "Hello,\n\nI purchased the ASUS TUF Gaming VG27VQ monitor (order ord_01) and noticed Best Buy reduced its price by $120.00 on day 9 of the 15-day return period.\n\nUnder your Price Match Guarantee policy, I'm entitled to a refund of the price difference. Please refund $120.00 to my original payment method.\n\nPolicy reference: https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c?id=pcmcat290300050002\n\nThank you.",
+    "text": "Hello,\n\nI purchased the ASUS TUF Gaming VG27VQ monitor (ord_01) and noticed the price dropped $200.00 on day 9, within your 15-day return period.\n\nUnder your Price Match Guarantee policy, you match your own lower prices during this period and refund the difference.\n\nPlease refund $200.00 to my original payment method.\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [
     {
      "from": "merchant",
      "text": "Thanks for contacting Best Buy. I'm Jordan. What can I do for you?",
-     "at": "2026-11-21T00:00:46.914Z"
+     "at": "2026-11-21T00:06:26.869Z"
     },
     {
      "from": "agent",
-     "text": "Hello,\n\nI purchased the ASUS TUF Gaming VG27VQ monitor (order ord_01) and noticed Best Buy reduced its price by $120.00 on day 9 of the 15-day return period.\n\nUnder your Price Match Guarantee policy, I'm entitled to a refund of the price difference. Please refund $120.00 to my original payment method.\n\nPolicy reference: https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c?id=pcmcat290300050002\n\nThank you.",
-     "at": "2026-11-21T00:01:09.914Z"
+     "text": "Hello,\n\nI purchased the ASUS TUF Gaming VG27VQ monitor (ord_01) and noticed the price dropped $200.00 on day 9, within your 15-day return period.\n\nUnder your Price Match Guarantee policy, you match your own lower prices during this period and refund the difference.\n\nPlease refund $200.00 to my original payment method.\n\nThank you.",
+     "at": "2026-11-21T00:06:49.869Z"
     },
     {
      "from": "merchant",
      "text": "I can offer you a $3.00 Best Buy gift card for the trouble.",
-     "at": "2026-11-21T00:01:32.914Z"
+     "at": "2026-11-21T00:07:12.869Z"
     },
     {
      "from": "agent",
      "text": "I'd like the refund to the original payment method, please. Your policy says: \"If Best Buy lowers its own price on an item during the return and exchange period, Best Buy will match that lower price and refund the difference.\"",
-     "at": "2026-11-21T00:01:55.914Z"
+     "at": "2026-11-21T00:07:35.869Z"
     },
     {
      "from": "merchant",
-     "text": "Understood. Since the item is still in the return period, I've processed a price adjustment of $120.00 to your card.",
-     "at": "2026-11-21T00:02:18.914Z"
+     "text": "Understood. Since the item is still in the return period, I've processed a price adjustment of $200.00 to your card.",
+     "at": "2026-11-21T00:07:58.869Z"
     },
     {
      "from": "agent",
-     "text": "Thank you. Confirming $120.00 back to the original payment method for order ord_01.",
-     "at": "2026-11-21T00:02:41.914Z"
+     "text": "Thank you. Confirming $200.00 back to the original payment method for order ord_01.",
+     "at": "2026-11-21T00:08:21.869Z"
     }
    ],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:45.494Z",
-     "text": "Found: Best Buy dropped the price of your 27-inch monitor by $120.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b",
+     "at": "2026-11-21T00:06:25.149Z",
+     "text": "Found: Best Buy dropped the price of your 27-inch monitor by $200.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b",
      "delivered": "imessage"
     },
     {
-     "at": "2026-11-21T00:00:47.023Z",
+     "at": "2026-11-21T00:06:27.013Z",
      "text": "Filed. Proof: http://172.24.40.180:4747/c/clm_aeaeba6b",
      "delivered": "imessage"
     },
     {
-     "at": "2026-11-21T00:00:48.695Z",
-     "text": "Best Buy approved $120.00.",
+     "at": "2026-11-21T00:06:28.686Z",
+     "text": "Best Buy approved $200.00.",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:24.227Z",
+     "at": "2026-11-21T00:06:06.212Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
-     "detail": "ASUS TUF Gaming VG27VQ 27\u201d Curved Monitor, 1080P Full HD, 165Hz (Supports 144Hz), Freesync, $499.00, ordered Tue Nov 10 2026"
+     "detail": "ASUS TUF Gaming VG27VQ 27\u201d Curved Monitor, 1080P Full HD, 165Hz (Supports 144Hz), Freesync, $699.00, ordered Tue Nov 10 2026"
     },
     {
-     "at": "2026-11-21T00:00:24.227Z",
+     "at": "2026-11-21T00:06:06.213Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"Price Match Guarantee\" (Senso, ranked by local-lexical)",
-     "detail": "Price dropped $120.00 on day 9 of a 15-day window."
+     "detail": "Price dropped $200.00 on day 9 of a 15-day window."
     },
     {
-     "at": "2026-11-21T00:00:24.227Z",
+     "at": "2026-11-21T00:06:06.213Z",
      "kind": "found",
      "actor": "agent",
-     "title": "Claim found: $120.00",
+     "title": "Claim found: $200.00",
      "detail": "Deadline Wed Nov 25 2026"
     },
     {
-     "at": "2026-11-21T00:00:45.494Z",
+     "at": "2026-11-21T00:06:25.149Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
-     "detail": "Found: Best Buy dropped the price of your 27-inch monitor by $120.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b"
+     "detail": "Found: Best Buy dropped the price of your 27-inch monitor by $200.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b"
     },
     {
-     "at": "2026-11-21T00:00:46.913Z",
+     "at": "2026-11-21T00:06:26.867Z",
      "kind": "approved",
      "actor": "user",
      "title": "Approved by you",
      "detail": "Approved by you, on the audit page"
     },
     {
-     "at": "2026-11-21T00:00:46.914Z",
+     "at": "2026-11-21T00:06:26.869Z",
      "kind": "filing",
      "actor": "agent",
      "title": "Opened chat with Best Buy support",
      "detail": "Simulated merchant: a scripted support rep. No real merchant is contacted."
     },
     {
-     "at": "2026-11-21T00:00:46.915Z",
+     "at": "2026-11-21T00:06:26.869Z",
      "kind": "filed",
      "actor": "agent",
      "title": "Claim filed with Best Buy",
      "detail": "6 messages exchanged"
     },
     {
-     "at": "2026-11-21T00:00:47.023Z",
+     "at": "2026-11-21T00:06:27.013Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Filed. Proof: http://172.24.40.180:4747/c/clm_aeaeba6b"
     },
     {
-     "at": "2026-11-21T00:00:48.525Z",
+     "at": "2026-11-21T00:06:28.516Z",
      "kind": "resolved",
      "actor": "merchant",
-     "title": "Best Buy approved $120.00"
+     "title": "Best Buy approved $200.00"
     },
     {
-     "at": "2026-11-21T00:00:48.695Z",
+     "at": "2026-11-21T00:06:28.686Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
-     "detail": "Best Buy approved $120.00."
+     "detail": "Best Buy approved $200.00."
     }
    ],
-   "createdAt": "2026-11-21T00:00:24.227Z",
-   "updatedAt": "2026-11-21T00:00:48.695Z"
+   "createdAt": "2026-11-21T00:06:06.212Z",
+   "updatedAt": "2026-11-21T00:06:28.687Z"
   },
   {
    "id": "clm_50bc90e0",
@@ -215,7 +215,7 @@
      }
     ]
    },
-   "deadline": "2026-12-20T08:14:00.161Z",
+   "deadline": "2026-12-20T08:14:00.247Z",
    "evidence": [
     {
      "label": "Delivery option",
@@ -243,56 +243,56 @@
     "title": "Baby Wipes, Pampers Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented, 8 Pop-Top Packs with 4 Refill Packs for Dispenser Tub, 864 Total Wipes (Packaging May Vary)",
     "asin": "B07JRBSPZ3",
     "price": 24.99,
-    "orderedAt": "2026-11-18T18:00:00.161Z",
+    "orderedAt": "2026-11-18T18:00:00.247Z",
     "category": "SKIN_CLEANING_WIPE"
    },
    "status": "found",
    "autoApproved": false,
    "draft": {
-    "text": "Hello,\n\nOrder ord_02 arrived 2 hours after the guaranteed delivery date. Per your Guaranteed Delivery policy, I'm entitled to a refund of shipping fees when delivery is late.\n\nPlease refund $9.95 to my original payment method.\n\nPolicy reference: https://www.amazon.com/gp/help/customer/display.html?nodeId=GXWHTQWK9E6MWGCH\n\nThank you.",
+    "text": "Hello,\n\nOrder ord_02 arrived 2 hours after the guaranteed delivery date. Per your Guaranteed Delivery policy, I'm requesting a refund of $9.95 for the shipping fees to my original payment method.\n\nPolicy reference: https://www.amazon.com/gp/help/customer/display.html?nodeId=GXWHTQWK9E6MWGCH\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:45.611Z",
+     "at": "2026-11-21T00:06:25.280Z",
      "text": "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: http://172.24.40.180:4747/c/clm_50bc90e0",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:27.888Z",
+     "at": "2026-11-21T00:06:09.347Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
      "detail": "Baby Wipes, Pampers Sensitive Water Based Baby Diaper Wipes, Hypoallergenic and Unscented,, $24.99, ordered Wed Nov 18 2026"
     },
     {
-     "at": "2026-11-21T00:00:27.888Z",
+     "at": "2026-11-21T00:06:09.347Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"Guaranteed Delivery\" (Senso, ranked by local-lexical)",
      "detail": "Delivered 2h after the promised time."
     },
     {
-     "at": "2026-11-21T00:00:27.889Z",
+     "at": "2026-11-21T00:06:09.347Z",
      "kind": "found",
      "actor": "agent",
      "title": "Claim found: $9.95",
      "detail": "Deadline Sun Dec 20 2026"
     },
     {
-     "at": "2026-11-21T00:00:45.611Z",
+     "at": "2026-11-21T00:06:25.280Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: http://172.24.40.180:4747/c/clm_50bc90e0"
     }
    ],
-   "createdAt": "2026-11-21T00:00:27.888Z",
-   "updatedAt": "2026-11-21T00:00:45.611Z"
+   "createdAt": "2026-11-21T00:06:09.347Z",
+   "updatedAt": "2026-11-21T00:06:25.280Z"
   },
   {
    "id": "clm_9273a250",
@@ -321,7 +321,7 @@
      }
     ]
    },
-   "deadline": "2026-11-28T18:00:00.161Z",
+   "deadline": "2026-11-28T18:00:00.247Z",
    "evidence": [
     {
      "label": "You paid",
@@ -349,56 +349,56 @@
     "title": "Wchiuoe Heated Blanket, 62\"x84\" 10 Heating Levels & 2-10H Auto Off Electric Blanket, Machine Washable Soft Flannel Fast Heating Throw Blanket for Bedroom Office Couch\u2026",
     "asin": "B09ZPFGLYH",
     "price": 46.99,
-    "orderedAt": "2026-11-14T18:00:00.161Z",
+    "orderedAt": "2026-11-14T18:00:00.247Z",
     "category": "BLANKET"
    },
    "status": "found",
    "autoApproved": false,
    "draft": {
-    "text": "Hello,\n\nI purchased the Wchiuoe Heated Blanket (order ord_03) and notice the price dropped $7.00 within your 14-day Price Match Guarantee window. Per your policy at https://www.target.com/help/article/000062256, I'm requesting a $7.00 price adjustment refunded to my original payment method.\n\nThank you.",
+    "text": "Hello,\n\nI purchased the Wchiuoe Heated Blanket (order ord_03) and noticed the price dropped $7.00 on day 5. Per your Price Match Guarantee policy, I'm requesting a $7.00 refund to my original payment method within the 14-day window.\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:45.709Z",
+     "at": "2026-11-21T00:06:25.395Z",
      "text": "Found: Target dropped the price of your heated blanket by $7.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_9273a250",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:31.194Z",
+     "at": "2026-11-21T00:06:12.813Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
      "detail": "Wchiuoe Heated Blanket, 62\"x84\" 10 Heating Levels & 2-10H Auto Off Electric Blanket, Machi, $46.99, ordered Sat Nov 14 2026"
     },
     {
-     "at": "2026-11-21T00:00:31.195Z",
+     "at": "2026-11-21T00:06:12.813Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"Price Match Guarantee\" (Senso, ranked by local-lexical)",
      "detail": "Price dropped $7.00 on day 5 of a 14-day window."
     },
     {
-     "at": "2026-11-21T00:00:31.195Z",
+     "at": "2026-11-21T00:06:12.814Z",
      "kind": "found",
      "actor": "agent",
      "title": "Claim found: $7.00",
      "detail": "Deadline Sat Nov 28 2026"
     },
     {
-     "at": "2026-11-21T00:00:45.709Z",
+     "at": "2026-11-21T00:06:25.395Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Found: Target dropped the price of your heated blanket by $7.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_9273a250"
     }
    ],
-   "createdAt": "2026-11-21T00:00:31.194Z",
-   "updatedAt": "2026-11-21T00:00:45.709Z"
+   "createdAt": "2026-11-21T00:06:12.813Z",
+   "updatedAt": "2026-11-21T00:06:25.395Z"
   },
   {
    "id": "clm_a126cd7c",
@@ -427,7 +427,7 @@
      }
     ]
    },
-   "deadline": "2026-12-08T18:00:00.161Z",
+   "deadline": "2026-12-08T18:00:00.247Z",
    "evidence": [
     {
      "label": "You paid",
@@ -455,56 +455,56 @@
     "title": "cuisinel Cast Iron Skillet + Lid - 2-In-1 Multi Cooker - Deep Pot + Frying Pan - 3-Qt Dutch Oven - Pre-Seasoned Oven Safe Cookware - Indoor/Outdoor - Grill, Stovetop, Induction Safe - Great for Bread",
     "asin": "B076PR8LT5",
     "price": 42.99,
-    "orderedAt": "2026-11-08T18:00:00.161Z",
+    "orderedAt": "2026-11-08T18:00:00.247Z",
     "category": "SAUTE_FRY_PAN"
    },
    "status": "found",
    "autoApproved": false,
    "draft": {
-    "text": "Hello,\n\nMy order ord_04 for the Cuisinel Cast Iron Skillet dropped $8.00 in price on day 11 within the 30-day window. Per your Price Match policy, I'm eligible for a price adjustment.\n\nPlease refund $8.00 to my original payment method.\n\nhttps://customerservice.costco.com/app/answers/answer_view/a_id/628\n\nThank you.",
+    "text": "Hello,\n\nMy order ord_04 for the Cuisinel Cast Iron Skillet dropped $8.00 on day 11 after purchase. Under your Price Match policy, purchases that reduce in price within 30 days qualify for a price adjustment.\n\nPlease refund $8.00 to my original payment method.\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:45.810Z",
+     "at": "2026-11-21T00:06:25.516Z",
      "text": "Found: Costco dropped the price of your cast iron skillet by $8.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_a126cd7c",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:34.404Z",
+     "at": "2026-11-21T00:06:15.706Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
      "detail": "cuisinel Cast Iron Skillet + Lid - 2-In-1 Multi Cooker - Deep Pot + Frying Pan - 3-Qt Dutc, $42.99, ordered Sun Nov 08 2026"
     },
     {
-     "at": "2026-11-21T00:00:34.404Z",
+     "at": "2026-11-21T00:06:15.707Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"Price Match: Costco.com Orders\" (Senso, ranked by local-lexical)",
      "detail": "Price dropped $8.00 on day 11 of a 30-day window."
     },
     {
-     "at": "2026-11-21T00:00:34.405Z",
+     "at": "2026-11-21T00:06:15.708Z",
      "kind": "found",
      "actor": "agent",
      "title": "Claim found: $8.00",
      "detail": "Deadline Tue Dec 08 2026"
     },
     {
-     "at": "2026-11-21T00:00:45.810Z",
+     "at": "2026-11-21T00:06:25.516Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Found: Costco dropped the price of your cast iron skillet by $8.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_a126cd7c"
     }
    ],
-   "createdAt": "2026-11-21T00:00:34.404Z",
-   "updatedAt": "2026-11-21T00:00:45.810Z"
+   "createdAt": "2026-11-21T00:06:15.706Z",
+   "updatedAt": "2026-11-21T00:06:25.516Z"
   },
   {
    "id": "clm_88290e6f",
@@ -533,7 +533,7 @@
      }
     ]
    },
-   "deadline": "2026-12-01T18:00:00.161Z",
+   "deadline": "2026-12-01T18:00:00.247Z",
    "evidence": [
     {
      "label": "You paid",
@@ -561,114 +561,114 @@
     "title": "beyond by BLACK+DECKER dustbuster\u00ae - Handheld Vacuum Cleaner - Cordless, Icy Blue - Mini Vacuum Cleaner (Model Number: HNVC215B12AEV)",
     "asin": "B08B6CJ9RT",
     "price": 32.94,
-    "orderedAt": "2026-11-16T18:00:00.161Z",
+    "orderedAt": "2026-11-16T18:00:00.247Z",
     "category": "VACUUM_CLEANER"
    },
    "status": "resolved",
    "autoApproved": true,
    "draft": {
-    "text": "Hello,\n\nOrder ord_05 qualifies for a price adjustment under your Price Match Guarantee. The beyond by BLACK+DECKER dustbuster\u00ae dropped $4.95 on day 3, within the return period.\n\nPlease refund $4.95 to my original payment method per your policy at https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c?id=pcmcat290300050002.\n\nThank you.",
+    "text": "Hello,\n\nI'm requesting a $4.95 refund to my original payment method for order ord_05 (beyond by BLACK+DECKER dustbuster\u00ae Handheld Vacuum Cleaner, Icy Blue). Your price dropped $4.95 on day 3 of the return period.\n\nYour Price Match Guarantee states you'll refund the difference when Best Buy lowers its own price during the return and exchange period.\n\nPlease process this $4.95 refund.\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [
     {
      "from": "merchant",
      "text": "Thanks for contacting Best Buy. I'm Jordan. What can I do for you?",
-     "at": "2026-11-21T00:00:45.811Z"
+     "at": "2026-11-21T00:06:25.517Z"
     },
     {
      "from": "agent",
-     "text": "Hello,\n\nOrder ord_05 qualifies for a price adjustment under your Price Match Guarantee. The beyond by BLACK+DECKER dustbuster\u00ae dropped $4.95 on day 3, within the return period.\n\nPlease refund $4.95 to my original payment method per your policy at https://www.bestbuy.com/site/help-topics/price-match-guarantee/pcmcat290300050002.c?id=pcmcat290300050002.\n\nThank you.",
-     "at": "2026-11-21T00:01:08.811Z"
+     "text": "Hello,\n\nI'm requesting a $4.95 refund to my original payment method for order ord_05 (beyond by BLACK+DECKER dustbuster\u00ae Handheld Vacuum Cleaner, Icy Blue). Your price dropped $4.95 on day 3 of the return period.\n\nYour Price Match Guarantee states you'll refund the difference when Best Buy lowers its own price during the return and exchange period.\n\nPlease process this $4.95 refund.\n\nThank you.",
+     "at": "2026-11-21T00:06:48.517Z"
     },
     {
      "from": "merchant",
      "text": "I can offer you a $3.00 Best Buy gift card for the trouble.",
-     "at": "2026-11-21T00:01:31.811Z"
+     "at": "2026-11-21T00:07:11.517Z"
     },
     {
      "from": "agent",
      "text": "I'd like the refund to the original payment method, please. Your policy says: \"If Best Buy lowers its own price on an item during the return and exchange period, Best Buy will match that lower price and refund the difference.\"",
-     "at": "2026-11-21T00:01:54.811Z"
+     "at": "2026-11-21T00:07:34.517Z"
     },
     {
      "from": "merchant",
      "text": "Understood. Since the item is still in the return period, I've processed a price adjustment of $4.95 to your card.",
-     "at": "2026-11-21T00:02:17.811Z"
+     "at": "2026-11-21T00:07:57.517Z"
     },
     {
      "from": "agent",
      "text": "Thank you. Confirming $4.95 back to the original payment method for order ord_05.",
-     "at": "2026-11-21T00:02:40.811Z"
+     "at": "2026-11-21T00:08:20.517Z"
     }
    ],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:45.908Z",
+     "at": "2026-11-21T00:06:25.644Z",
      "text": "Auto-approved (under $5.00): Best Buy dropped the price of your handheld vacuum by $4.95. Their price policy refunds the difference. Filed. Proof: http://172.24.40.180:4747/c/clm_88290e6f",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:38.080Z",
+     "at": "2026-11-21T00:06:19.303Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
      "detail": "beyond by BLACK+DECKER dustbuster\u00ae - Handheld Vacuum Cleaner - Cordless, Icy Blue - Mini V, $32.94, ordered Mon Nov 16 2026"
     },
     {
-     "at": "2026-11-21T00:00:38.082Z",
+     "at": "2026-11-21T00:06:19.304Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"Price Match Guarantee\" (Senso, ranked by local-lexical)",
      "detail": "Price dropped $4.95 on day 3 of a 15-day window."
     },
     {
-     "at": "2026-11-21T00:00:38.082Z",
+     "at": "2026-11-21T00:06:19.304Z",
      "kind": "found",
      "actor": "agent",
      "title": "Claim found: $4.95",
      "detail": "Deadline Tue Dec 01 2026"
     },
     {
-     "at": "2026-11-21T00:00:45.810Z",
+     "at": "2026-11-21T00:06:25.516Z",
      "kind": "approved",
      "actor": "system",
      "title": "Auto-approved",
      "detail": "Approved by auto (statsig flag: under $5.00)"
     },
     {
-     "at": "2026-11-21T00:00:45.811Z",
+     "at": "2026-11-21T00:06:25.517Z",
      "kind": "filing",
      "actor": "agent",
      "title": "Opened chat with Best Buy support",
      "detail": "Simulated merchant: a scripted support rep. No real merchant is contacted."
     },
     {
-     "at": "2026-11-21T00:00:45.812Z",
+     "at": "2026-11-21T00:06:25.518Z",
      "kind": "filed",
      "actor": "agent",
      "title": "Claim filed with Best Buy",
      "detail": "6 messages exchanged"
     },
     {
-     "at": "2026-11-21T00:00:45.908Z",
+     "at": "2026-11-21T00:06:25.644Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Auto-approved (under $5.00): Best Buy dropped the price of your handheld vacuum by $4.95. Their price policy refunds the difference. Filed. Proof: http://172.24.40.180:4747/c/clm_88290e6f"
     },
     {
-     "at": "2026-11-21T00:00:46.211Z",
+     "at": "2026-11-21T00:06:25.945Z",
      "kind": "resolved",
      "actor": "merchant",
      "title": "Best Buy approved $4.95"
     }
    ],
-   "createdAt": "2026-11-21T00:00:38.080Z",
-   "updatedAt": "2026-11-21T00:00:46.211Z"
+   "createdAt": "2026-11-21T00:06:19.302Z",
+   "updatedAt": "2026-11-21T00:06:25.946Z"
   },
   {
    "id": "clm_c3d7321f",
@@ -697,7 +697,7 @@
      }
     ]
    },
-   "deadline": "2026-11-27T03:55:00.161Z",
+   "deadline": "2026-11-27T03:55:00.247Z",
    "evidence": [
     {
      "label": "Delivery option",
@@ -725,104 +725,104 @@
     "title": "Community Coffee Caf\u00e9 Special Half-Caff Ground Coffee, Medium Dark Roast, 32 Ounce Bag (Pack of 2)",
     "asin": "B018LJZHVS",
     "price": 25.96,
-    "orderedAt": "2026-11-19T18:00:00.161Z",
+    "orderedAt": "2026-11-19T18:00:00.247Z",
     "category": "COFFEE"
    },
    "status": "resolved",
    "autoApproved": true,
    "draft": {
-    "text": "Hello,\n\nOrder ord_07 arrived 2 hours past the promised delivery time, exceeding the 30-minute threshold under your On-Time Window Promise policy (https://example.com/cornercart/promise).\n\nPlease refund $3.00 to my original payment method.\n\nThank you.",
+    "text": "Hello,\n\nOrder ord_07 arrived 2 hours past the promised delivery time. Per your On-Time Window Promise policy, I'm owed a $3.00 credit for deliveries over 30 minutes late.\n\nhttps://example.com/cornercart/promise\n\nPlease refund $3.00 to my original payment method.\n\nThank you.",
     "engine": "anthropic:claude-sonnet-4-5-20250929"
    },
    "transcript": [
     {
      "from": "merchant",
      "text": "Corner Cart here. What happened with your delivery?",
-     "at": "2026-11-21T00:00:46.212Z"
+     "at": "2026-11-21T00:06:25.953Z"
     },
     {
      "from": "agent",
-     "text": "Hello,\n\nOrder ord_07 arrived 2 hours past the promised delivery time, exceeding the 30-minute threshold under your On-Time Window Promise policy (https://example.com/cornercart/promise).\n\nPlease refund $3.00 to my original payment method.\n\nThank you.",
-     "at": "2026-11-21T00:01:09.212Z"
+     "text": "Hello,\n\nOrder ord_07 arrived 2 hours past the promised delivery time. Per your On-Time Window Promise policy, I'm owed a $3.00 credit for deliveries over 30 minutes late.\n\nhttps://example.com/cornercart/promise\n\nPlease refund $3.00 to my original payment method.\n\nThank you.",
+     "at": "2026-11-21T00:06:48.953Z"
     },
     {
      "from": "merchant",
      "text": "Sorry we were late. We've credited $3.00 to your account.",
-     "at": "2026-11-21T00:01:32.212Z"
+     "at": "2026-11-21T00:07:11.953Z"
     },
     {
      "from": "agent",
      "text": "Thank you. Confirming $3.00 back to the original payment method for order ord_07.",
-     "at": "2026-11-21T00:01:55.212Z"
+     "at": "2026-11-21T00:07:34.953Z"
     }
    ],
    "channel": "simulated-merchant",
    "messages": [
     {
-     "at": "2026-11-21T00:00:46.333Z",
+     "at": "2026-11-21T00:06:26.122Z",
      "text": "Auto-approved (under $5.00): Corner Cart Grocery delivered your coffee 2h late. Their on-time promise credits $3.00. Filed. Proof: http://172.24.40.180:4747/c/clm_c3d7321f",
      "delivered": "imessage"
     }
    ],
    "timeline": [
     {
-     "at": "2026-11-21T00:00:43.607Z",
+     "at": "2026-11-21T00:06:23.087Z",
      "kind": "order",
      "actor": "system",
      "title": "Order read",
      "detail": "Community Coffee Caf\u00e9 Special Half-Caff Ground Coffee, Medium Dark Roast, 32 Ounce Bag (Pa, $25.96, ordered Thu Nov 19 2026"
     },
     {
-     "at": "2026-11-21T00:00:43.609Z",
+     "at": "2026-11-21T00:06:23.087Z",
      "kind": "rule",
      "actor": "agent",
      "title": "Matched \"On-Time Window Promise\" (Senso, ranked by local-lexical)",
      "detail": "Delivered 2h after the promised time."
     },
     {
-     "at": "2026-11-21T00:00:43.609Z",
+     "at": "2026-11-21T00:06:23.087Z",
      "kind": "found",
      "actor": "agent",
      "title": "Claim found: $3.00",
      "detail": "Deadline Thu Nov 26 2026"
     },
     {
-     "at": "2026-11-21T00:00:46.212Z",
+     "at": "2026-11-21T00:06:25.950Z",
      "kind": "approved",
      "actor": "system",
      "title": "Auto-approved",
      "detail": "Approved by auto (statsig flag: under $5.00)"
     },
     {
-     "at": "2026-11-21T00:00:46.212Z",
+     "at": "2026-11-21T00:06:25.953Z",
      "kind": "filing",
      "actor": "agent",
      "title": "Opened chat with Corner Cart Grocery support",
      "detail": "Simulated merchant: a scripted support rep. No real merchant is contacted."
     },
     {
-     "at": "2026-11-21T00:00:46.213Z",
+     "at": "2026-11-21T00:06:25.954Z",
      "kind": "filed",
      "actor": "agent",
      "title": "Claim filed with Corner Cart Grocery",
      "detail": "4 messages exchanged"
     },
     {
-     "at": "2026-11-21T00:00:46.333Z",
+     "at": "2026-11-21T00:06:26.122Z",
      "kind": "message",
      "actor": "agent",
      "title": "Texted you (imessage)",
      "detail": "Auto-approved (under $5.00): Corner Cart Grocery delivered your coffee 2h late. Their on-time promise credits $3.00. Filed. Proof: http://172.24.40.180:4747/c/clm_c3d7321f"
     },
     {
-     "at": "2026-11-21T00:00:46.634Z",
+     "at": "2026-11-21T00:06:26.423Z",
      "kind": "resolved",
      "actor": "merchant",
      "title": "Corner Cart Grocery approved $3.00"
     }
    ],
-   "createdAt": "2026-11-21T00:00:43.607Z",
-   "updatedAt": "2026-11-21T00:00:46.634Z"
+   "createdAt": "2026-11-21T00:06:23.087Z",
+   "updatedAt": "2026-11-21T00:06:26.425Z"
   }
  ],
  "skipped": [
@@ -847,53 +847,53 @@
  ],
  "outbox": [
   {
-   "at": "2026-11-21T00:00:45.493Z",
-   "text": "Found: Best Buy dropped the price of your 27-inch monitor by $120.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b",
+   "at": "2026-11-21T00:06:25.148Z",
+   "text": "Found: Best Buy dropped the price of your 27-inch monitor by $200.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_aeaeba6b",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:45.610Z",
+   "at": "2026-11-21T00:06:25.279Z",
    "text": "Found: Amazon delivered your baby wipes 2h late. Their guarantee refunds the $9.95 fee. Approve: http://172.24.40.180:4747/c/clm_50bc90e0",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:45.708Z",
+   "at": "2026-11-21T00:06:25.394Z",
    "text": "Found: Target dropped the price of your heated blanket by $7.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_9273a250",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:45.809Z",
+   "at": "2026-11-21T00:06:25.515Z",
    "text": "Found: Costco dropped the price of your cast iron skillet by $8.00. Their price policy refunds the difference. Approve: http://172.24.40.180:4747/c/clm_a126cd7c",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:45.908Z",
+   "at": "2026-11-21T00:06:25.643Z",
    "text": "Auto-approved (under $5.00): Best Buy dropped the price of your handheld vacuum by $4.95. Their price policy refunds the difference. Filed. Proof: http://172.24.40.180:4747/c/clm_88290e6f",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:46.332Z",
+   "at": "2026-11-21T00:06:26.121Z",
    "text": "Auto-approved (under $5.00): Corner Cart Grocery delivered your coffee 2h late. Their on-time promise credits $3.00. Filed. Proof: http://172.24.40.180:4747/c/clm_c3d7321f",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:46.756Z",
-   "text": "What I've saved you: $7.95 recovered so far. $144.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/",
+   "at": "2026-11-21T00:06:26.595Z",
+   "text": "What I've saved you: $7.95 recovered so far. $224.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:47.022Z",
+   "at": "2026-11-21T00:06:27.012Z",
    "text": "Filed. Proof: http://172.24.40.180:4747/c/clm_aeaeba6b",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:48.694Z",
-   "text": "Best Buy approved $120.00.",
+   "at": "2026-11-21T00:06:28.686Z",
+   "text": "Best Buy approved $200.00.",
    "delivered": "imessage"
   },
   {
-   "at": "2026-11-21T00:00:48.831Z",
-   "text": "What I've saved you: $127.95 recovered so far. $24.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/",
+   "at": "2026-11-21T00:06:28.821Z",
+   "text": "What I've saved you: $207.95 recovered so far. $24.95 is waiting on your OK. 1 missed: Target price dropped $10.00, but the window had closed. All claims: http://172.24.40.180:4747/",
    "delivered": "imessage"
   }
  ]
