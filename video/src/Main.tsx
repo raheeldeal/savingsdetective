@@ -26,7 +26,7 @@ const Badge: React.FC<{ size?: number }> = ({ size = 96 }) => <div style={{ widt
 
 const Counter = () => {
   const f = useCurrentFrame();
-  const landAt = T.enter.from + T.enter.frames - 90;
+  const landAt = T.enter.from + 420 + 2 * 95;
   const v = f < landAt ? 0 : interpolate(f, [landAt, landAt + 40], [0, 200], { extrapolateRight: "clamp" });
   const v2 = f > T.fight.from + 300 ? 207.95 : v;
   const dark = f >= T.close.from;
@@ -88,7 +88,7 @@ const Enter = () => {
           {ticks.map((t, i) => <Pop key={t} at={90 + i * 120} style={{ display: "flex", gap: 18, alignItems: "center", fontSize: 32 }}><span style={{ width: 48, height: 48, borderRadius: 24, background: C.accent, color: "#fff", display: "grid", placeItems: "center", fontSize: 28, fontWeight: 800 }}>✓</span>{t}</Pop>)}
         </div>
       </div>
-      <div style={{ width: 460, height: 900, background: "#fff", borderRadius: 60, border: "14px solid #111", display: "flex", flexDirection: "column", overflow: "hidden", position: "relative", boxShadow: "0 40px 100px rgba(0,0,0,.2)" }}>
+      <div style={{ width: 440, height: 820, marginTop: 110, background: "#fff", borderRadius: 60, border: "14px solid #111", display: "flex", flexDirection: "column", overflow: "hidden", position: "relative", boxShadow: "0 40px 100px rgba(0,0,0,.2)" }}>
         <div style={{ position: "absolute", top: 14, width: "100%", textAlign: "center", fontSize: 13, letterSpacing: "0.1em", color: "#999" }}>RECREATION</div>
         <div style={{ padding: "50px 0 12px", textAlign: "center", background: "#f7f7f7", borderBottom: "1px solid #e5e5ea" }}><div style={{ margin: "0 auto", width: 56 }}><Badge size={56} /></div><div style={{ fontSize: 15, marginTop: 6 }}>SavingsDetective</div></div>
         <div style={{ flex: 1, padding: 16, display: "flex", flexDirection: "column", justifyContent: "flex-end", gap: 10 }}>
@@ -141,7 +141,7 @@ const Fight = () => {
         <Pop at={330}><Card style={{ padding: 22, marginTop: 24 }}><div style={{ fontSize: 18, fontWeight: 650, color: C.ink3, letterSpacing: ".06em" }}>CRASH TEST · {drill.length} HOSTILE REPS · {drill.length} PASSES</div><div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 10 }}>{drill.map((d: string) => <span key={d} style={{ fontSize: 18, background: C.soft, color: C.accent, padding: "4px 12px", borderRadius: 999 }}>PASS {d.replace(/ \(.*\)/, "")}</span>)}</div></Card></Pop>
       </div>
       <div style={{ flex: 1, display: "flex", justifyContent: "flex-end" }}>
-        <div style={{ width: 440, height: 880, borderRadius: 44, overflow: "hidden", border: "12px solid #111", background: "#fff" }}><OffthreadVideo src={staticFile("audit.mp4")} muted startFrom={120} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} /></div>
+        <div style={{ width: 420, height: 800, marginTop: 110, borderRadius: 44, overflow: "hidden", border: "12px solid #111", background: "#fff" }}><OffthreadVideo src={staticFile("audit.mp4")} muted startFrom={120} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top" }} /></div>
       </div>
       <div style={{ position: "absolute", right: 120, bottom: 60, fontSize: 18, color: C.accent, background: C.soft, padding: "6px 14px", borderRadius: 999, fontWeight: 600 }}>Real audit page footage</div>
     </AbsoluteFill>
